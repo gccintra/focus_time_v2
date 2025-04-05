@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200..800&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+
+}
+
+
+#leftPanel {
+    max-width: 60%;   
+    /* min-width: 764px;    */
+    padding: 6rem 4rem;
+    background-color: #0D1117;
+}
+
+#leftPanel h1 {
+    font-size: clamp(4rem, 8vw, 6rem); /* Mínimo de 2rem, ajustável com 6vw, máximo de 6rem */
+    max-width: 80%;
+    font-weight: 400;
+}
+
+.brand {
+    position: absolute;
+    bottom: 40px;
+    font-family: "Stick No Bills", sans-serif;
+    font-size: 32px;
+    font-weight: 100;
+}
+
+#formDiv {
+    padding-top: 6rem;
+}
+
+#formDiv h2 {
+    font-weight: 300;
+}
+
+.btn-login {
+    background-color: #0D1117;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-login:hover,
+.btn-login:active {
+    background-color: #1f1a2b !important;
+    border-color: #1f1a2b !important;
+    color: #ffffff !important;
+}
+
+#copyright {
+    font-size: 12px;
+    position: absolute;
+    bottom: 16px;
+}
+
+@media (max-height: 620px) {
+    .brand, #copyright {
+        display: none;
+    }
+}

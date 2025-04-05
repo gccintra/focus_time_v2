@@ -1,0 +1,44 @@
+[
+    {
+        "identificator": "user-e3b24f89-f674-4632-898c-624194201c69",
+        "username": "localhost",
+        "email": "user@localhost",
+        "password": "$2a$12$yNeO8.2adMv7Riuy7wTR5uoa82YJjvygCIirQfnBtH2yk34I4SD/2",
+        "status": "active"
+    },
+    {
+        "identificator": "user-d0b57306-ede7-4f64-8acd-dad87e46a300",
+        "username": "admin",
+        "email": "admin@localhost",
+        "password": "$2b$12$w7l/pkaV2hBZSnm.FLlL6.Je4scyLboai0Gwd6bbyAJu1xVHTx2vy",
+        "status": "active"
+    },
+    {
+        "identificator": "user-60475128-16fe-4606-acf6-28c0b36cca01",
+        "username": "gccintra",
+        "email": "cintra.gustavo@hotmail.com",
+        "password": "$2b$12$OJnMJrejTc2WH9.R9S785eD4stsye.G1vgDvVRoMYzfuhVlhJKBTy",
+        "status": "active"
+    },
+    {
+        "identificator": "user-c36b9c09-99b2-4602-90c3-bcea0630e995",
+        "username": "gustavo",
+        "email": "gustavo@email",
+        "password": "$2b$12$7i9i40Tq1zi0s46b5pXueOWqHYbrfnxqey2l7SzoEliTBKfnQPG/q",
+        "status": "active"
+    },
+    {
+        "identificator": "user-0b5b5033-2269-48b6-9ad4-1571a44d20a8",
+        "username": "gccintra2",
+        "email": "admin@localhost2",
+        "password": "$2b$12$nrQc5ufumu7LiTIOlLJoveVW9M/Mc2.kn.QYC0PJt4yyKMXYoO6pK",
+        "status": "active"
+    },
+    {
+        "identificator": "user-cd5ef760-bb8f-4d9c-b9f5-c7a472a2a019",
+        "username": "gucintra",
+        "email": "cintra.gucintra@gmail.com",
+        "password": "$2b$12$/SwscmqUrd8pVT8BmIj0IuZAlWo4Q0xteqrJM58q.wgWMJkPChWpW",
+        "status": "active"
+    }
+]

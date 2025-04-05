@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Stick+No+Bills:wght@200..800&display=swap');
+
+body {
+    background-color: #0D1117; 
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+
+}
+
+/* NavBar */
+
+.navbar {
+    background-color: #0D1117 !important;
+}
+
+.navbar .navbar-brand, 
+.navbar .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar .navbar-brand{
+    font-family: "Stick No Bills", sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.navbar .nav-link {
+    font-size: 20px;
+
+}
+
+.nav-link.active {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Primary Button */
+
+.btn-primary {
+    background-color: #6A17FF;  
+    color: #ffffff;  
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #5014bf;  
+}
+
+.btn-primary:active {
+    background-color: #4a13af !important; 
+    border-color: #4a13af !important;    
+}
+
+.btn-outline-secondary {  
+    color: #cccccc;
+    border-color: #cccccc;
+}
+
+/* Input Dark */
+
+.dark-input {
+    background-color: #212121; /* Fundo do input */
+    border: 2px solid #303030; /* Borda mais escura */
+    color: #fff; /* Texto branco */
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+}
+
+.dark-input:focus {
+    border-color: #6A17FF; /* Azul neon ao focar */
+    color: #fff; /* Texto branco */
+    background-color: #212121; /* Fundo do input */
+}
+
+.dark-input::placeholder {
+    color: #aaa; /* Cor do placeholder */
+}
+
+/* Primary Modal */
+
+.primary-modal .modal-content{
+    background-color: #0D1117;
+    border: 1px solid #303030;
+}
+
+.primary-modal .modal-header{
+    border: 1px solid #303030;
+}
+
+.primary-modal .modal-footer{
+    border: 1px solid #303030;
+
+}
+
+.primary-modal .modal-label{
+    font-weight: 300;
+}
+ 
+
+.custom-card {
+    background-color: #212121;  
+    color: white;              
+    border-radius: 15px;       
+    padding: 20px;
+    border: 2px solid transparent;
+    cursor: pointer; 
+    transition: transform 0.5s ease;
+
+}
+
+.custom-card:hover {
+    transform: scale(1.015);
+}
+
+#taskTitle {
+    background-color: #212121;
+    border-radius: 15px;    
+    border: 2px solid #303030;
+    color: white;
+}
+
+#taskTitleContent {
+    padding: 20px;
+}
+
+
+
+#taskTitle span {
+    font-size: 32px;
+
+}
+
+#taskTitle #backButtom {
+    cursor: pointer; 
+    font-size: 2.2rem;
+}
+
+#taskTitle #backButtom:hover {
+    transform: scale(1.2); /* Um pequeno efeito de aumentar o ícone */
+    transition: all 0.3s ease; /* Adiciona uma transição suave ao efeito de hover */
+}
+
+
+
+
+
+
+/* Estilo do cartão */
+.to-do-card {
+    background-color: #212121;
+    color: #e0e0e0;
+    border-radius: 15px;
+    padding: 16px;
+    border: 2px solid #303030;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+
+/* Estilo do botão de exclusão */
+.to-do-card #deleteToDo {
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: #e0e0e0;
+    transition: color 0.3s ease;
+}
+
+.to-do-card #deleteToDo:hover {
+    color: #ff4d4d;
+    transform: scale(1.2);
+}
+
+
+/* Checkbox redondo com hover */
+.rounded-checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+
+.rounded-checkbox:hover {
+    background-color: #e0e0e0;
+    border-color: #a6a6a6;
+    transform: scale(1.15);
+}
+
+.rounded-checkbox:checked {
+    background-color: #42c642;
+    border-color: #42c642;
+}
+
+
+/* Centralização e estilo do texto */
+.to-do-text-check {
+    display: flex;
+    align-items: center; /* Alinhando o texto e o checkbox verticalmente */
+    gap: 10px; /* Ajuste do espaço entre checkbox e texto */
+}
+
+.to-do-text-check span {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+
+.finished-container-collapse {
+    margin-bottom: 120px;
+}
+
+
+.to-do-card #infoToDo {
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: #e0e0e0;
+    transition: color 0.3s ease;
+}
+
+.to-do-card #infoToDo:hover {
+    color: #21b9f5;
+    transform: scale(1.2);
+}
+
+/* Estilização para o tooltip */
+.info-to-do-tooltip {
+    --bs-tooltip-bg: #21b9f5;
+    --bs-tooltip-color: #ffffff;
+}
+
+
+.heatmap {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    
+}
+
+
+@media (max-width: 1750px) {
+    #github-container {
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        display: flex;
+        max-width: 100%;
+        padding-bottom: 16px; 
+    }
+
+    /* Estilizando a barra de rolagem para navegadores baseados em WebKit */
+    #github-container::-webkit-scrollbar {
+        height: 16px; /* Altura da scrollbar */
+    }
+
+    #github-container::-webkit-scrollbar-track {
+        background: #303030; /* Cor do fundo da barra */
+        border-radius: 10px;
+    }
+
+    #github-container::-webkit-scrollbar-thumb {
+        background: #505050; /* Cor do "botão" da barra */
+        border-radius: 10px;
+    }
+
+    #github-container::-webkit-scrollbar-thumb:hover {
+        background: #707070; /* Cor ao passar o mouse */
+    }
+
+    /* Para Firefox
+    #github-container {
+        scrollbar-width: thin;
+        scrollbar-color: #505050 #303030;
+    } */
+
+}
+
+/* 
+#github-container {
+    background-color: #212121;  
+    border-radius: 15px;       
+    border: 2px solid #303030;
+} */
+
+#graph365 {
+    background-color: #212121;  
+    border-radius: 15px;       
+    border: 2px solid #303030;
+}
+
+
+
+/* ARRUMAR ESSE TOOLTIP, NÃO ESTÁ CARREGANDO LÁ */
+.info-tooltip {
+    --bs-tooltip-bg: #6d6d6d !important;
+    --bs-tooltip-color: #ffffff !important;
+}
+
+.less-more-cell {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}

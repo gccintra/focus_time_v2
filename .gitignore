@@ -1,0 +1,13 @@
+venv/
+env/
+.venv/
+.env/
+
+coverage/
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+app/database/user.json

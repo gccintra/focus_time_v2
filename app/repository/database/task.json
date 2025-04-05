@@ -1,0 +1,165 @@
+[
+    {
+        "user_FK": "user-d0b57306-ede7-4f64-8acd-dad87e46a300",
+        "identificator": "task-6554752a-6dfa-44b7-bc01-6703d1e88250",
+        "title": "Leitura",
+        "color": "#009dff",
+        "status": "active",
+        "seconds_in_focus_per_day": {
+            "2024-11-30": 1000,
+            "2024-12-01": 1000,
+            "2024-12-02": 1000,
+            "2024-12-03": 1000,
+            "2024-12-04": 1000,
+            "2024-12-05": 9986,
+            "2024-12-06": 1000,
+            "2025-01-08": 809,
+            "2025-01-09": 810,
+            "2025-01-21": 12013,
+            "2025-01-28": 12064,
+            "2025-02-08": 12080
+        }
+    },
+    {
+        "user_FK": "user-d0b57306-ede7-4f64-8acd-dad87e46a300",
+        "identificator": "task-163d9725-3519-474e-8e68-fc446ad71303",
+        "title": "Estudar",
+        "color": "#d400ff",
+        "status": "active",
+        "seconds_in_focus_per_day": {
+            "2024-12-03": 2039,
+            "2024-12-04": 1003,
+            "2024-12-05": 9492,
+            "2025-01-08": 2300,
+            "2025-01-09": 809,
+            "2025-01-12": 6004,
+            "2025-01-21": 29000,
+            "2025-01-28": 29006,
+            "2025-02-10": 5
+        }
+    },
+    {
+        "user_FK": "user-d0b57306-ede7-4f64-8acd-dad87e46a300",
+        "identificator": "task-4a25959c-c4f9-486e-8874-9508426f5acd",
+        "title": "Trabalho",
+        "color": "#75ff7e",
+        "status": "active",
+        "seconds_in_focus_per_day": {
+            "2024-06-22": 14239,
+            "2025-01-22": 6420,
+            "2025-01-23": 17080,
+            "2025-01-24": 19599,
+            "2025-01-27": 15882,
+            "2025-01-28": 14,
+            "2025-01-29": 9641,
+            "2025-01-30": 11340,
+            "2025-01-31": 14239,
+            "2025-02-04": 6279,
+            "2025-02-05": 8477,
+            "2025-02-06": 196,
+            "2025-02-11": 12285,
+            "2025-02-15": 151,
+            "2025-02-17": 14174,
+            "2025-02-18": 1,
+            "2025-02-19": 1371
+        }
+    },
+    {
+        "user_FK": "user-d0b57306-ede7-4f64-8acd-dad87e46a300",
+        "identificator": "task-04d54a48-71db-46e2-afa8-d320b45a1458",
+        "title": "Enem Med 2026",
+        "color": "#f2a41c",
+        "status": "active",
+        "seconds_in_focus_per_day": {
+            "2025-01-23": 2341
+        }
+    },
+    {
+        "user_FK": "user-d0b57306-ede7-4f64-8acd-dad87e46a300",
+        "identificator": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Focus Time Develop",
+        "color": "#ff0000",
+        "status": "active",
+        "seconds_in_focus_per_day": {
+            "2025-01-23": 6445,
+            "2025-01-24": 9832,
+            "2025-01-25": 8232,
+            "2025-01-26": 7043,
+            "2025-01-27": 2038,
+            "2025-01-28": 2038,
+            "2025-01-29": 7043,
+            "2025-02-01": 5,
+            "2025-02-19": 529
+        }
+    },
+    {
+        "user_FK": "user-60475128-16fe-4606-acf6-28c0b36cca01",
+        "identificator": "task-adf226bb-2872-40ca-806b-b785e2d3bc81",
+        "title": "Enem Med 2026",
+        "color": "#00c3d1",
+        "status": "active",
+        "seconds_in_focus_per_day": {
+            "2025-02-16": 4820,
+            "2025-02-19": 1245
+        }
+    },
+    {
+        "user_FK": "user-e3b24f89-f674-4632-898c-624194201c69",
+        "identificator": "task-c000870e-1181-4a01-8239-687a75f22983",
+        "title": "Primeira Vaga .Net",
+        "color": "#ffffff",
+        "status": "active",
+        "seconds_in_focus_per_day": {
+            "2025-02-16": 398
+        }
+    },
+    {
+        "user_FK": "user-c36b9c09-99b2-4602-90c3-bcea0630e995",
+        "identificator": "task-d193c83e-c79e-41e0-a680-8518dfda7d97",
+        "title": "Leitura - 12 Livros/Ano",
+        "color": "#00d1a7",
+        "status": "active",
+        "seconds_in_focus_per_day": {
+            "2025-02-16": 23
+        }
+    },
+    {
+        "user_FK": "user-e3b24f89-f674-4632-898c-624194201c69",
+        "identificator": "task-7544eff7-8e2f-4d59-80e3-b89b24b78723",
+        "title": "Cantar",
+        "color": "#00a7b3",
+        "status": "active",
+        "seconds_in_focus_per_day": {
+            "2025-02-16": 1526
+        }
+    },
+    {
+        "user_FK": "user-d0b57306-ede7-4f64-8acd-dad87e46a300",
+        "identificator": "task-579c068c-47d2-4220-9be7-5e698ff22921",
+        "title": "IME ITA 2025 (Só para Focados)",
+        "color": "#2ccc00",
+        "status": "active",
+        "seconds_in_focus_per_day": {}
+    },
+    {
+        "user_FK": "user-c36b9c09-99b2-4602-90c3-bcea0630e995",
+        "identificator": "task-0a77104d-5e81-4e11-b2b0-6473234be025",
+        "title": "IME ITA 2025",
+        "color": "#1aff34",
+        "status": "active",
+        "seconds_in_focus_per_day": {
+            "2025-02-19": 88,
+            "2025-02-20": 12
+        }
+    },
+    {
+        "user_FK": "user-fa064bd4-c2b5-4d58-b8b2-9c6b86b991ef",
+        "identificator": "task-2f49aa0b-ed40-4db9-b658-5b9ae4f71bfb",
+        "title": "testa",
+        "color": "#b994ff",
+        "status": "active",
+        "seconds_in_focus_per_day": {
+            "2025-02-21": 60
+        }
+    }
+]

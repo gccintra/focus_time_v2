@@ -1,0 +1,762 @@
+[
+    {
+        "task_FK": "task-6554752a-6dfa-44b7-bc01-6703d1e88250",
+        "title": "Steve Jobs",
+        "identificator": "todo-9e175a77-48cf-4c89-a1f8-d7d2fbcc5c35",
+        "status": "in progress",
+        "created_time": "2025-01-16T14:22:37.086992",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-6554752a-6dfa-44b7-bc01-6703d1e88250",
+        "title": "Clean Code",
+        "identificator": "todo-84fa28c6-59ac-4ab0-adb4-e1a1dbd0fbe4",
+        "status": "in progress",
+        "created_time": "2025-01-16T14:22:37.086992",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-6554752a-6dfa-44b7-bc01-6703d1e88250",
+        "title": "Lord of the Flies",
+        "identificator": "todo-497f0279-6f49-4d8e-8a51-f2e05e2b2360",
+        "status": "in progress",
+        "created_time": "2025-01-16T14:22:37.086992",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-6554752a-6dfa-44b7-bc01-6703d1e88250",
+        "title": "teste",
+        "identificator": "todo-695dc1ff-78ff-4f4f-92a4-2452ec95f55d",
+        "status": "completed",
+        "created_time": "2025-01-27T23:32:55.574091",
+        "completed_time": "2025-02-03T23:46:03.504787"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Data de Criação da Task também",
+        "identificator": "todo-47302ca9-0790-47d4-bc57-4098942c4305",
+        "status": "in progress",
+        "created_time": "2025-01-28T08:11:54.206714",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "FK do User na tabela Task",
+        "identificator": "todo-0695d483-eedb-4dae-aa4c-8c637e7edfe9",
+        "status": "completed",
+        "created_time": "2025-01-28T08:12:05.606962",
+        "completed_time": "2025-02-11T14:10:49.821848"
+    },
+    {
+        "task_FK": "task-163d9725-3519-474e-8e68-fc446ad71303",
+        "title": "Orientação a Objetos",
+        "identificator": "todo-9f848461-0e85-42aa-a92a-a21ba8039d01",
+        "status": "completed",
+        "created_time": "2025-01-12T18:38:38.153245",
+        "completed_time": "2025-01-21T17:21:37.801510"
+    },
+    {
+        "task_FK": "task-163d9725-3519-474e-8e68-fc446ad71303",
+        "title": "Lista de IAL",
+        "identificator": "todo-ea9b818b-df7e-42dc-a9bb-5c2a63b64d39",
+        "status": "completed",
+        "created_time": "2025-01-12T18:38:43.845675",
+        "completed_time": "2025-01-28T09:57:14.304051"
+    },
+    {
+        "task_FK": "task-163d9725-3519-474e-8e68-fc446ad71303",
+        "title": "testes unitarios",
+        "identificator": "todo-c8373ccc-b99f-4981-95be-1801fbf79601",
+        "status": "in progress",
+        "created_time": "2025-01-16T12:43:21.957968",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-4a25959c-c4f9-486e-8874-9508426f5acd",
+        "title": "SIVOB Manual (Realizar Vistoria)",
+        "identificator": "todo-de7004f5-8f0e-4cfe-9ccb-b32e913ccf69",
+        "status": "completed",
+        "created_time": "2025-01-22T15:38:18.302539",
+        "completed_time": "2025-02-03T16:47:01.840401"
+    },
+    {
+        "task_FK": "task-4a25959c-c4f9-486e-8874-9508426f5acd",
+        "title": "SIVOB Manual (Gerar Laudo)",
+        "identificator": "todo-f9f20661-f992-4f34-8fef-a76aea7ad55f",
+        "status": "completed",
+        "created_time": "2025-01-22T16:50:24.387975",
+        "completed_time": "2025-01-22T16:53:49.085390"
+    },
+    {
+        "task_FK": "task-4a25959c-c4f9-486e-8874-9508426f5acd",
+        "title": "Passar em todas as issues do ITL e verificar o milestones (Nas que não são HU)",
+        "identificator": "todo-a2eaa24d-31a6-4879-a561-43185120ffab",
+        "status": "in progress",
+        "created_time": "2025-01-23T17:50:16.602357",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-4a25959c-c4f9-486e-8874-9508426f5acd",
+        "title": "Sprint 27 ITL",
+        "identificator": "todo-3430d58f-0eb4-4c31-96af-63bfdf8b28bd",
+        "status": "completed",
+        "created_time": "2025-01-24T13:51:23.900530",
+        "completed_time": "2025-01-24T16:20:34.955184"
+    },
+    {
+        "task_FK": "task-4a25959c-c4f9-486e-8874-9508426f5acd",
+        "title": "Documentar Mudanças - ITL",
+        "identificator": "todo-a820aade-a99d-4b76-9f57-ee94283d0144",
+        "status": "in progress",
+        "created_time": "2025-01-24T13:51:32.815434",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-4a25959c-c4f9-486e-8874-9508426f5acd",
+        "title": "Documentar - Sprint 27 (ITL)",
+        "identificator": "todo-6544eed5-e607-4878-abf3-e6b3532769dc",
+        "status": "completed",
+        "created_time": "2025-01-24T16:21:17.098126",
+        "completed_time": "2025-01-31T11:10:47.987285"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Getters + Setters",
+        "identificator": "todo-e3ef22c7-eb27-4e70-a3d8-d21c8f3e627e",
+        "status": "in progress",
+        "created_time": "2025-01-21T22:24:10.822040",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Separar Controllers e Routes",
+        "identificator": "todo-fbea0e87-0aeb-4323-9fe7-80f1f5e9b452",
+        "status": "completed",
+        "created_time": "2025-01-21T22:24:32.356318",
+        "completed_time": "2025-01-24T09:59:48.059155"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Salvar o seconds_in_focus_per_day a todo segundo, e não somente quando o usuário clicar em stop",
+        "identificator": "todo-49096c26-6162-4246-a439-ea7b83012e4a",
+        "status": "completed",
+        "created_time": "2025-01-21T22:24:49.431641",
+        "completed_time": "2025-01-23T12:05:15.506893"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Tratamento de Erros ",
+        "identificator": "todo-f1caf21c-1c5f-434c-818d-b5e9b6c9a4a2",
+        "status": "completed",
+        "created_time": "2025-01-21T22:25:01.546454",
+        "completed_time": "2025-01-26T15:06:36.320114"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Apresentação de mensagens para o usuário",
+        "identificator": "todo-56f2f68a-c246-4a7d-8869-a018a1fb2d61",
+        "status": "in progress",
+        "created_time": "2025-01-21T22:25:11.684168",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Estrutura de Pastas (Organizar)",
+        "identificator": "todo-72a95286-cef2-4f93-861b-0a0b3f6ebd1e",
+        "status": "completed",
+        "created_time": "2025-01-23T11:01:54.773123",
+        "completed_time": "2025-01-23T21:56:53.659791"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Salvar os arquivos static em cache (toda vez que dou f5 ele tenta buscar os dados e da 304)",
+        "identificator": "todo-28cff7b3-857a-4d41-adb0-48733cb9d4e2",
+        "status": "in progress",
+        "created_time": "2025-01-23T11:16:08.312918",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Prioridade de Tasks",
+        "identificator": "todo-61bb41f5-2a5d-4c2d-8763-7d65657f936c",
+        "status": "in progress",
+        "created_time": "2025-01-23T14:45:56.841963",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Ordenação das Tasks",
+        "identificator": "todo-321711f8-86d7-4653-8009-e8d34cae2abb",
+        "status": "in progress",
+        "created_time": "2025-01-23T14:46:02.699241",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Ícone para o FocusTime",
+        "identificator": "todo-8f31225e-b42a-4f0e-8655-6d43163cbd92",
+        "status": "completed",
+        "created_time": "2025-01-23T14:46:28.513909",
+        "completed_time": "2025-01-24T09:59:39.539191"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Tratativa para quando o usuário pressionar o \"Enter\" ao invés de confirmar clicando no botão",
+        "identificator": "todo-0ebe1277-660b-4e0a-81fc-4acbaef6004a",
+        "status": "in progress",
+        "created_time": "2025-01-23T14:46:47.849630",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Fonte do Timer",
+        "identificator": "todo-bfa65277-dae8-42c5-bfd7-dfdcf39f37c3",
+        "status": "in progress",
+        "created_time": "2025-01-23T16:44:01.623855",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Adicionar cache em memória usando bibliotecas como functools.lru_cache.",
+        "identificator": "todo-bb084bf2-4f49-4281-9041-1e3048ffb4fa",
+        "status": "in progress",
+        "created_time": "2025-01-24T10:43:20.382125",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Repository",
+        "identificator": "todo-b8061865-bed1-43fe-bc75-7927c8f48599",
+        "status": "completed",
+        "created_time": "2025-01-24T13:52:12.472491",
+        "completed_time": "2025-01-25T14:47:00.192545"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Configurar Logging do Flask: https://flask.palletsprojects.com/en/stable/logging/",
+        "identificator": "todo-fbfdd7e4-b5bc-41b1-aaa7-5955225dc4b1",
+        "status": "in progress",
+        "created_time": "2025-01-25T15:15:52.679308",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "get_data_for_chart_my_tasks_menu - Realizar somente 1 requisição e enviar todos os dados, tratar o resto no front-end",
+        "identificator": "todo-5169f076-943b-4ae5-9027-e45b7021b7d6",
+        "status": "completed",
+        "created_time": "2025-01-25T22:27:52.904706",
+        "completed_time": "2025-01-26T11:25:35.854003"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Travar quantidade de caracteres para criação de to-do e de task",
+        "identificator": "todo-c0aeaaa4-8c9e-4ee8-9b97-91103cfa043a",
+        "status": "in progress",
+        "created_time": "2025-01-26T13:30:51.537011",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": " Padrão de dados enviados para o front end (succes(true/false), data{}, error{code, message, detail}, message)",
+        "identificator": "todo-a1ad893b-faa8-4982-a68c-fac9ae6b737f",
+        "status": "completed",
+        "created_time": "2025-01-26T13:34:18.452639",
+        "completed_time": "2025-01-26T15:06:49.728988"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Tratamento de Erros Front-End",
+        "identificator": "todo-deaf65d1-0e0d-4066-8eb6-29c91366edf6",
+        "status": "in progress",
+        "created_time": "2025-01-26T15:06:45.534063",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Validações ao tentar criar uma task com id igual (hard coded)",
+        "identificator": "todo-bcc606a2-d2af-4b49-bef8-04505e8830f3",
+        "status": "in progress",
+        "created_time": "2025-01-26T15:07:32.103471",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Testes Unitários (Failure e Success)",
+        "identificator": "todo-6c84f535-a82e-4f83-868e-78904b639c12",
+        "status": "in progress",
+        "created_time": "2025-01-26T15:07:48.899952",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Login/Register",
+        "identificator": "todo-932f112b-5e2c-4328-afe9-6f744c732b5c",
+        "status": "completed",
+        "created_time": "2025-01-27T13:40:23.393154",
+        "completed_time": "2025-02-11T14:10:25.797326"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Arquivos (User, Task, To-do)",
+        "identificator": "todo-549aa5f4-461c-47a4-a033-3409dca09361",
+        "status": "completed",
+        "created_time": "2025-01-27T13:40:38.795559",
+        "completed_time": "2025-02-11T14:10:23.639887"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Mudar Titulo dessa tela (Start Task para o nome da task)",
+        "identificator": "todo-e0201821-535a-4521-bad5-07b30f9406f1",
+        "status": "in progress",
+        "created_time": "2025-01-27T15:08:05.789441",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-163d9725-3519-474e-8e68-fc446ad71303",
+        "title": "Injeção de Dependência (https://imasters.com.br/back-end/injecao-de-dependencia-em-java-e-python)",
+        "identificator": "todo-4ec04a1c-2fd7-4b31-ab1e-6e9d0e506133",
+        "status": "in progress",
+        "created_time": "2025-01-28T11:16:04.713742",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "cookies",
+        "identificator": "todo-78be5cd9-0e14-4976-9e05-a5b7d5f89df6",
+        "status": "completed",
+        "created_time": "2025-01-28T13:18:45.229695",
+        "completed_time": "2025-02-11T14:10:06.798188"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Tooltip do 365 days",
+        "identificator": "todo-8522fd33-ee63-468c-a641-0f95d10547f3",
+        "status": "completed",
+        "created_time": "2025-01-29T09:35:01.798975",
+        "completed_time": "2025-01-31T10:19:16.868911"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Estilização do scroll horizontal (365 days)",
+        "identificator": "todo-9c6ba8a3-7090-487f-bf7a-e0089e717241",
+        "status": "completed",
+        "created_time": "2025-01-29T09:35:26.765933",
+        "completed_time": "2025-01-30T11:46:54.840598"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "(Back-End) Envio dos dados para montar o gráfico 365 days",
+        "identificator": "todo-f7816589-6b60-427e-97ad-5c12f5a1905e",
+        "status": "completed",
+        "created_time": "2025-01-29T09:35:48.004812",
+        "completed_time": "2025-02-03T22:52:32.246277"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Finalizar a apresentação de mensagens usuário front-end",
+        "identificator": "todo-1717f685-222d-4c3f-9376-f228afebe707",
+        "status": "in progress",
+        "created_time": "2025-01-29T09:36:10.062406",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Ordenar as tasks de acordo com a porcentagem",
+        "identificator": "todo-e82e58bd-dac3-4c59-96d9-26a88e1446f0",
+        "status": "completed",
+        "created_time": "2025-01-30T11:40:00.161706",
+        "completed_time": "2025-02-11T14:10:11.017178"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "365 days - Lidar com vários fusos horários e usuários de diferentes países",
+        "identificator": "todo-ff6be45f-e8bc-469f-b592-e7cb9a5034e5",
+        "status": "completed",
+        "created_time": "2025-01-30T12:29:00.443988",
+        "completed_time": "2025-01-31T10:19:25.032059"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "365 days - Receber startDate e endDate como paramêtros, além de criar diversos modelos de gráficos (de acordo com a necessidade) e enviar como parâmetro qual tipo de gráfico será gerado",
+        "identificator": "todo-1f038698-2ee0-4dd9-b216-14df79a1eada",
+        "status": "in progress",
+        "created_time": "2025-01-30T15:03:36.094432",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "365 days - cálculo da cor (MaxCount=Maior tempo em foco entre os dados que estarão no gráfico, MinCount)",
+        "identificator": "todo-414cefac-f5a8-4a89-97d2-d03325a10c9d",
+        "status": "completed",
+        "created_time": "2025-01-30T15:09:30.676603",
+        "completed_time": "2025-01-31T10:19:29.491700"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "melhorar responsividade do To Do List (manter botões lado a lado, distância do texto para os botões)",
+        "identificator": "todo-2ac82262-5355-4ffe-ad11-1bc13300ebc8",
+        "status": "completed",
+        "created_time": "2025-01-30T15:10:24.111691",
+        "completed_time": "2025-02-01T08:58:24.287823"
+    },
+    {
+        "task_FK": "task-4a25959c-c4f9-486e-8874-9508426f5acd",
+        "title": "Testar ITL",
+        "identificator": "todo-809073d7-9c37-4f6e-85d6-d1cb12d6620a",
+        "status": "completed",
+        "created_time": "2025-01-30T15:11:52.198322",
+        "completed_time": "2025-01-31T11:33:19.530031"
+    },
+    {
+        "task_FK": "task-4a25959c-c4f9-486e-8874-9508426f5acd",
+        "title": "Apresentar e homologar ITL",
+        "identificator": "todo-bd4bfa0d-562c-4d61-be82-32aecc97f9f2",
+        "status": "completed",
+        "created_time": "2025-01-30T15:11:59.963242",
+        "completed_time": "2025-01-31T10:55:18.218054"
+    },
+    {
+        "task_FK": "task-4a25959c-c4f9-486e-8874-9508426f5acd",
+        "title": "Exportar para Excel ITL",
+        "identificator": "todo-57cb540a-9188-46ff-810d-2af541158c3d",
+        "status": "completed",
+        "created_time": "2025-01-30T15:12:13.132287",
+        "completed_time": "2025-02-03T17:08:18.475259"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "To Do List - Mais Detalhes, Label (Fazendo), atribuir a pessoa",
+        "identificator": "todo-9542bc88-da5c-40d8-a81b-0ac84a82ac2d",
+        "status": "in progress",
+        "created_time": "2025-01-30T15:21:20.627566",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "autenticaçao com JWT",
+        "identificator": "todo-587cfb65-3952-498b-94e0-ae4a15c0f156",
+        "status": "completed",
+        "created_time": "2025-01-30T15:21:36.564308",
+        "completed_time": "2025-02-11T14:10:15.836122"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Gamificar",
+        "identificator": "todo-f8c12c01-7253-474c-a2c6-1a2181121992",
+        "status": "in progress",
+        "created_time": "2025-01-30T15:23:49.716565",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Criar \"Tasks\" conjuntas, pode ser usado por empresas/projetos",
+        "identificator": "todo-dcc69c5c-e952-4f0e-9b0f-0ec24ab0d350",
+        "status": "in progress",
+        "created_time": "2025-01-30T15:24:07.570773",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Adicionar status como \"ausente\", \"em reunião\", etc.",
+        "identificator": "todo-833f77f9-1728-4ab9-90c7-e60119e5278e",
+        "status": "in progress",
+        "created_time": "2025-01-30T15:24:11.729013",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Exibir informações sobre o projeto e cargo de cada usuário.",
+        "identificator": "todo-95462556-1b61-41d8-b892-581520acdb0a",
+        "status": "in progress",
+        "created_time": "2025-01-30T15:24:15.850846",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Adicionar tags personalizadas como \"ausente\", \"em reunião\", \"break almoço\", etc.",
+        "identificator": "todo-93777d72-0934-4b54-ad99-33338e8dfeff",
+        "status": "in progress",
+        "created_time": "2025-01-30T15:24:20.183930",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Implementar chats para comunicação entre usuários de uma mesma tarefa e chats individuais.",
+        "identificator": "todo-2b1bd0f0-35d5-4d1e-9663-c89aff1ee04e",
+        "status": "in progress",
+        "created_time": "2025-01-30T15:24:25.011140",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Mostrar os usuários que estão focados no trabalho, junto ao tempo em que estão dedicando à tarefa.",
+        "identificator": "todo-60b7445d-a482-4077-a4f6-136a08bc4770",
+        "status": "in progress",
+        "created_time": "2025-01-30T15:24:29.191862",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Enviar notificações quando um usuário estiver ausente por muito tempo. Caso não responda, parar o tempo de foco dele.",
+        "identificator": "todo-df613be1-aca0-400d-8988-fe4c0fcac3ac",
+        "status": "in progress",
+        "created_time": "2025-01-30T15:24:33.751485",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Criar uma opção para agendar tempo de foco privado durante reuniões, onde o tempo não será ajustado (nem retirado nem adicionado).",
+        "identificator": "todo-76619a4d-bbb7-41fb-906a-a1ce7ecfc680",
+        "status": "in progress",
+        "created_time": "2025-01-30T15:24:40.869811",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Permitir que os usuários editem o tempo de foco de dias anteriores. Enviar a mudança e a justificativa para o administrador.",
+        "identificator": "todo-f9ee5282-8f4a-4ee1-a7f5-3f73ca510993",
+        "status": "in progress",
+        "created_time": "2025-01-30T15:24:46.197835",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "MVP Robusto",
+        "identificator": "todo-03de16e5-4ebc-4afe-8005-b7b609eefaf4",
+        "status": "in progress",
+        "created_time": "2025-01-30T15:25:14.439962",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Aplicar mais como P.O aqui no FocusTime, não somente como dev",
+        "identificator": "todo-ef1eb4ae-69c9-4f7d-ac32-7a1a7611dd1f",
+        "status": "in progress",
+        "created_time": "2025-01-30T15:25:32.074535",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Organizar Backlog",
+        "identificator": "todo-8b9e383e-0fa9-4a34-91f2-9bab8894a42b",
+        "status": "in progress",
+        "created_time": "2025-01-30T15:25:49.988649",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Exemplo de Task em Grupo: \"Concurso ITA\". Varios estudantes focados em estudar no concurso, com gamificação e apresentação dos que estão mais tempo estudando, to-do privado",
+        "identificator": "todo-67b0e307-3d8c-4890-89ed-da02081967e1",
+        "status": "in progress",
+        "created_time": "2025-01-30T15:27:04.235968",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Task em Grupo - Apresentação dos usuários que estão em foco exatamente no momento da visualização + o timer de cada 1",
+        "identificator": "todo-24c5fcaf-72a1-45dc-9fc4-3b82f5a26271",
+        "status": "in progress",
+        "created_time": "2025-01-30T15:27:54.023800",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-163d9725-3519-474e-8e68-fc446ad71303",
+        "title": "Mexer com arquivos (Download, Upload, Delete)",
+        "identificator": "todo-78c33821-453f-4e06-9eb4-5f29aa365e66",
+        "status": "in progress",
+        "created_time": "2025-01-30T18:28:51.286738",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-4a25959c-c4f9-486e-8874-9508426f5acd",
+        "title": "Backlog Sprint 28 - ITL",
+        "identificator": "todo-ca6d1ff0-7e35-42f8-9045-c79202272533",
+        "status": "completed",
+        "created_time": "2025-01-31T11:10:34.186500",
+        "completed_time": "2025-02-05T16:49:03.577043"
+    },
+    {
+        "task_FK": "task-4a25959c-c4f9-486e-8874-9508426f5acd",
+        "title": "+ de 1 Técnico por Vistoria - SIVOB",
+        "identificator": "todo-996a63b1-9004-468b-8de7-da9f7b02388e",
+        "status": "in progress",
+        "created_time": "2025-01-31T11:16:29.372583",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-4a25959c-c4f9-486e-8874-9508426f5acd",
+        "title": "Emular SIVOB APP no pc",
+        "identificator": "todo-9b83bd99-e360-4bf0-864e-0306e3548fd2",
+        "status": "completed",
+        "created_time": "2025-01-31T16:46:50.400955",
+        "completed_time": "2025-02-05T14:44:42.309545"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Validação de entrada de dados (To Do e Task)",
+        "identificator": "todo-43b6c011-bd7a-44e8-8e59-a128771043a2",
+        "status": "in progress",
+        "created_time": "2025-02-01T09:04:48.491934",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Ajustar os valores \"Today\" e \"Week\"",
+        "identificator": "todo-87e33421-16a8-477a-aeac-1a3d17118aad",
+        "status": "in progress",
+        "created_time": "2025-02-01T09:08:12.083531",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Campos de Texto mais bonitos (tema escuro)",
+        "identificator": "todo-5195084e-e2d0-4fc7-9c8d-b897197a29f1",
+        "status": "in progress",
+        "created_time": "2025-02-01T09:08:27.225353",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-163d9725-3519-474e-8e68-fc446ad71303",
+        "title": "Assincronismo",
+        "identificator": "todo-d24c2634-baf5-40c7-b88e-5849b6b8ee8a",
+        "status": "in progress",
+        "created_time": "2025-02-01T11:08:57.272664",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-163d9725-3519-474e-8e68-fc446ad71303",
+        "title": "Observabilidade",
+        "identificator": "todo-21c404a5-d10e-4a9d-bf0d-aa0133ed528f",
+        "status": "in progress",
+        "created_time": "2025-02-01T11:39:19.781425",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "DataRecod.save() -> apresentar erro 500 ao tentar salvar alvo e não realizar a inclusão",
+        "identificator": "todo-9285fb89-33c9-4bcf-8b89-44cb27fa4d54",
+        "status": "in progress",
+        "created_time": "2025-02-01T15:46:50.727633",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Bug nos dias: Domingo (Não cria uma nova week), Segunda e Terça (o layout quebra, não elimina a primeira semana na esquerda)",
+        "identificator": "todo-d69462c4-227f-4ace-9107-978c64b9d200",
+        "status": "in progress",
+        "created_time": "2025-02-03T13:54:24.218092",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-4a25959c-c4f9-486e-8874-9508426f5acd",
+        "title": "Manual APP - SIVOB",
+        "identificator": "todo-efc7004a-2df1-496d-8f4e-1a31130b4ef0",
+        "status": "completed",
+        "created_time": "2025-02-03T16:47:09.492502",
+        "completed_time": "2025-02-20T21:27:00.722084"
+    },
+    {
+        "task_FK": "task-4a25959c-c4f9-486e-8874-9508426f5acd",
+        "title": "Transparência em relação ao backlog do ITL",
+        "identificator": "todo-cd516309-f0db-4a5d-afa8-b0f259da7b7d",
+        "status": "completed",
+        "created_time": "2025-02-04T16:44:37.871138",
+        "completed_time": "2025-02-05T16:49:09.774499"
+    },
+    {
+        "task_FK": "task-4a25959c-c4f9-486e-8874-9508426f5acd",
+        "title": "Atualizar Backlog do teams ITL",
+        "identificator": "todo-697c2df1-8514-4bd0-9046-ed3d332c4ef2",
+        "status": "completed",
+        "created_time": "2025-02-04T17:08:49.762168",
+        "completed_time": "2025-02-05T16:49:06.239269"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Video com o sistema rodando bem dinamico na tela de login",
+        "identificator": "todo-e6361306-1490-45e3-a066-f5daa8976cf9",
+        "status": "in progress",
+        "created_time": "2025-02-06T15:56:44.709663",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Login com e-mail nome e senha",
+        "identificator": "todo-fca8cc80-997d-47df-8730-d6083f08eabe",
+        "status": "completed",
+        "created_time": "2025-02-06T15:56:50.928441",
+        "completed_time": "2025-02-11T14:09:46.745348"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "logout",
+        "identificator": "todo-66a1c96a-69a6-40bd-a854-031cf2bd9529",
+        "status": "completed",
+        "created_time": "2025-02-11T14:11:05.647448",
+        "completed_time": "2025-02-17T13:23:44.960002"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Problema de quando o token expirar",
+        "identificator": "todo-637749cb-4adc-47d4-a3a0-7bf22837d344",
+        "status": "in progress",
+        "created_time": "2025-02-11T16:44:18.792600",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Não é Week, mas sim: last 7 days",
+        "identificator": "todo-70aca5fa-a57d-4977-a758-cb9690a139ff",
+        "status": "in progress",
+        "created_time": "2025-02-12T08:12:49.418905",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Adicionar um botão no navbar -> visualizar todos os usuários online e em foco (Websocket)",
+        "identificator": "todo-321dca0e-07ff-49ec-bd3d-f75260334150",
+        "status": "completed",
+        "created_time": "2025-02-12T13:59:33.204653",
+        "completed_time": "2025-02-17T13:23:38.320002"
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "enviar role pelo token e criar uma tela para admin",
+        "identificator": "todo-cd03472c-a748-40f4-b8e8-a22e6bc7c723",
+        "status": "in progress",
+        "created_time": "2025-02-12T14:00:24.342939",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "https://getbootstrap.com/docs/4.0/components/forms/?",
+        "identificator": "todo-c2ae8081-b947-4a41-9687-c2e486ee6856",
+        "status": "in progress",
+        "created_time": "2025-02-19T14:24:22.163734",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-f2a9da81-f968-497c-92ec-6750eee0ccdf",
+        "title": "Mudar Nomeclatura de Task para Project",
+        "identificator": "todo-ee8e9d93-8705-4e69-9159-1d483e28d34c",
+        "status": "in progress",
+        "created_time": "2025-02-19T15:08:39.813510",
+        "completed_time": null
+    },
+    {
+        "task_FK": "task-2f49aa0b-ed40-4db9-b658-5b9ae4f71bfb",
+        "title": "teste",
+        "identificator": "todo-05845530-afa1-4c76-af5f-6b4f5a5acb13",
+        "status": "completed",
+        "created_time": "2025-02-21T00:18:32.695406",
+        "completed_time": "2025-02-21T00:18:41.453834"
+    },
+    {
+        "task_FK": "task-2f49aa0b-ed40-4db9-b658-5b9ae4f71bfb",
+        "title": "teste22",
+        "identificator": "todo-15841db3-4eef-4ff3-949d-6b5e9259e515",
+        "status": "in progress",
+        "created_time": "2025-02-21T00:18:36.699843",
+        "completed_time": null
+    }
+]
