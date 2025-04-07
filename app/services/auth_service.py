@@ -1,4 +1,4 @@
-from ..repository.user_record import UserRecord
+from ..infra.repository.user_record import UserRecord
 from ..models.user import User
 from ..utils.logger import logger
 from ..models.exceptions import UserNotFoundError, InvalidPasswordError, EmailAlreadyExists, UsernameAlreadyExists, InvalidCreatePasswordError, UserValidationError

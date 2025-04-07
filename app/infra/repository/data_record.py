@@ -1,10 +1,10 @@
 import json
 import os
 import shutil
-from ..models.task import Task
-from ..models.todo import ToDo
-from ..models.user import User
-from ..utils.logger import logger
+from app.models.task import Task
+from app.models.todo import ToDo
+from app.models.user import User
+from app.utils.logger import logger
 
 class DataRecord:
     def __init__(self, filename):

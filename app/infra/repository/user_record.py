@@ -1,9 +1,9 @@
 from .data_record import DataRecord
-from ..utils.logger import logger
+from app.utils.logger import logger
 from app.models.user import User
 import json
 import uuid
-from ..models.exceptions import UserNotFoundError, UsernameAlreadyExists, EmailAlreadyExists
+from app.models.exceptions import UserNotFoundError, UsernameAlreadyExists, EmailAlreadyExists
 
 
 

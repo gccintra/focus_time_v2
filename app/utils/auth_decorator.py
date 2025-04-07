@@ -1,7 +1,7 @@
 from functools import wraps
 from flask import request, current_app, redirect, url_for, jsonify
 import jwt
-from app.repository.user_record import UserRecord  # Classe que manipula os usuários
+from app.infra.repository.user_record import UserRecord  # Classe que manipula os usuários
 
 
 def login_required(f):

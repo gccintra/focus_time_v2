@@ -1,6 +1,6 @@
 from ..models.todo import ToDo
 from ..models.exceptions import ToDoValidationError, TodoNotFoundError
-from ..repository.todo_record import ToDoRecord
+from ..infra.repository.todo_record import ToDoRecord
 from datetime import datetime
 from ..utils.logger import logger
 from ..models.exceptions import DatabaseError

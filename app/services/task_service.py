@@ -1,6 +1,6 @@
 from ..models.task import Task
 from ..models.exceptions import TaskNotFoundError, TaskValidationError
-from ..repository.task_record import TaskRecord
+from ..infra.repository.task_record import TaskRecord
 from ..utils.logger import logger
 from ..models.exceptions import DatabaseError
 from datetime import date, timedelta
