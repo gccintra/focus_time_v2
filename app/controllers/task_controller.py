@@ -70,7 +70,7 @@ class TaskController:
 
     def start_task(self, task_id, user=None):
         try:
-            task, todo_list = self.task_todo_service.get_task_todo_list(task_id=task_id, user_id=user.identificator)
+            task, todo_list = self.task_todo_service.get_task_ctodo_list(task_id=task_id, user_id=user.identificator)
             return render_template("start_task.html", title="Start Task", task=task, to_do_list=todo_list, user=user)
         except TaskNotFoundError:
             return abort(404)

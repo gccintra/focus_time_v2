@@ -1,8 +1,8 @@
 from .data_record import DataRecord
-from ..models.task import Task
-from ..models.exceptions import TaskNotFoundError, TodoNotFoundError
+from app.models.task import Task
+from app.models.exceptions import TaskNotFoundError, TodoNotFoundError
 import uuid, json
-from ..utils.logger import logger
+from app.utils.logger import logger
 
 class ToDoRecord(DataRecord):
     def __init__(self):

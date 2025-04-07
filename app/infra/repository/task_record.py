@@ -1,9 +1,9 @@
 from .data_record import DataRecord
-from ..models.task import Task
-from ..models.exceptions import TaskNotFoundError
+from app.models.task import Task
+from app.models.exceptions import TaskNotFoundError
 import uuid
 import json
-from ..utils.logger import logger
+from app.utils.logger import logger
 
 class TaskRecord(DataRecord):
     def __init__(self):
