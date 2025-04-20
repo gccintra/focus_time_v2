@@ -1,7 +1,8 @@
 from functools import wraps
 from flask import request, current_app, redirect, url_for, jsonify
 import jwt
-from app.infra.repository.user_record import UserRecord  # Classe que manipula os usuários
+from app.infra.repository.user_repository import UserRepository
+
 
 
 def login_required(f):
@@ -21,8 +22,8 @@ def login_required(f):
                 payload = jwt.decode(token, secret_key, algorithms=["HS256"])
                 user_id = payload.get("id")
 
-                user_record = UserRecord()
-                user = user_record.get_user_by_id(user_id)
+                repo = UserRepository()
+                user = repo.get_by_id(user_id)
 
                 request.current_user = user  
 
@@ -45,7 +46,7 @@ def redirect_if_logged_in(f):
             try:
                 secret_key = current_app.config["SECRET_KEY"]
                 jwt.decode(token, secret_key, algorithms=["HS256"])
-                return redirect(url_for("task.tasks_route"))  # Se autenticado, redireciona para /task
+                return redirect(url_for("project.projects_route"))  # Se autenticado, redireciona para / project
             except (jwt.ExpiredSignatureError, jwt.InvalidTokenError):
                 pass  # Token inválido ou expirado, continua para a home normalmente
 

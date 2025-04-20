@@ -114,30 +114,30 @@ body {
     transform: scale(1.015);
 }
 
-#taskTitle {
+#projectHeader {
     background-color: #212121;
     border-radius: 15px;    
     border: 2px solid #303030;
     color: white;
 }
 
-#taskTitleContent {
+#projectHeaderContent {
     padding: 20px;
 }
 
 
 
-#taskTitle span {
+#projectHeader span {
     font-size: 32px;
 
 }
 
-#taskTitle #backButtom {
+#projectHeader #backButtom {
     cursor: pointer; 
     font-size: 2.2rem;
 }
 
-#taskTitle #backButtom:hover {
+#projectHeader #backButtom:hover {
     transform: scale(1.2); /* Um pequeno efeito de aumentar o ícone */
     transition: all 0.3s ease; /* Adiciona uma transição suave ao efeito de hover */
 }

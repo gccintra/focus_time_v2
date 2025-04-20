@@ -1,8 +1,8 @@
 import json
 import os
 import shutil
+from app.models.project import Project
 from app.models.task import Task
-from app.models.todo import ToDo
 from app.models.user import User
 from app.utils.logger import logger
 
@@ -10,9 +10,9 @@ class DataRecord:
     def __init__(self, filename):
         self.models_classes = {
             'user.json': User,
-            'task.json': Task,
-            'todo.json': ToDo,
-            'test_task.json': Task   
+            'task.json': Project,
+            'todo.json': Task,
+            'test_task.json': Project   
         }
 
         self._filename = "app/infra/repository/database/" +  filename

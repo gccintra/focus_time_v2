@@ -1,4 +1,4 @@
-from app.services.task_service import TaskService
+from app.services.project_service import TaskService
 from app.services.todo_service import ToDoService
 from app.models.exceptions import TaskNotFoundError
 

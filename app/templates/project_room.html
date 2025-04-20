@@ -4,20 +4,23 @@
 
 {% block content %}
 
-    <div class="my-4" id="taskTitle">
-        <div id="taskTitleContent" class="d-flex align-items-center gap-4">
-            <i class="bi bi-chevron-left" id="backButtom"></i>
-            <span>{{ task.title }}</span>
+    <div class="my-4" id="projectHeader">
+        <div id="projectHeaderContent" class="d-flex align-items-center gap-4">
+            {# Alterado para ir para a lista de projetos #}
+            <i class="bi bi-chevron-left" id="backButtom" style="cursor: pointer;"></i>
+            {# Alterado para acessar o título do projeto dentro do dicionário #}
+            <span>{{ project.project.title }}</span>
         </div>
     </div>
 
 
     <!-- Cronômetro -->
     <div class="container text-center mb-5">
-        <div class="mt-5 d-inline-block text-start"> 
+        <div class="mt-5 d-inline-block text-start">
             <p class="mb-3">Time in Focus Today:</p>
             <div id="timer" class="mb-4">
-                <span class="display-1" id="timerDisplay">{{ task.today_total_time_timer }}</span>
+                {# Alterado para usar o tempo formatado do dicionário (HH:MM:SS) #}
+                <span class="display-1" id="timerDisplay">{{ project.today_focus_time_formatted }}</span>
             </div>
             <button class="btn btn-primary w-100 py-2 fs-4" id="timerButton">Start</button>
         </div>
@@ -25,34 +28,38 @@
 
     <hr>
 
-    <h2 class="mt-5">To Do List</h2>
+    <h2 class="mt-5">Task List</h2>
 
-    
+
     <div class="row g-4 my-3 to-do-grid" id="toDoGridInProgress">
 
-        {% for to_do_item in to_do_list if to_do_item.status == 'in progress' %}
+        {# Alterado para iterar sobre project.tasks #}
+        {% for task_item in project.tasks if task_item.status == 'in progress' %}
 
             <div class="col-md-12 to-do-item">
 
-                <div 
+                <div
                     class="d-flex justify-content-between align-items-center to-do-card "
-                    data-id="{{ to_do_item.identificator }}">
-        
+                    {# Alterado para usar o identificador da tarefa do dicionário #}
+                    data-id="{{ task_item.identificator }}">
+
                     <div class="to-do-text-check d-flex align-items-center me-3 flex-grow-1 text-wrap">
                         <input class="form-check-input to-do-check-box me-3 mt-0 rounded-checkbox" type="checkbox" value="" aria-label="...">
-                        <span class="to-do-title mb-0 text-break">{{ to_do_item.title }}</span>
+                        {# Alterado para usar o título da tarefa do dicionário #}
+                        <span class="to-do-title mb-0 text-break">{{ task_item.title }}</span>
                     </div>
-                    
+
                     <div class="d-flex flex-shrink-0" id="icons">
-                        <i 
-                            class="bi bi-info-circle fs-4 me-3" 
-                            id="infoToDo" 
-                            data-bs-toggle="tooltip" 
+                        <i
+                            class="bi bi-info-circle fs-4 me-3"
+                            id="infoToDo"
+                            data-bs-toggle="tooltip"
                             data-bs-placement="left"
                             data-bs-custom-class="info-to-do-tooltip"
                             data-bs-html="true"
-                            title="Created Time:<br>{{ to_do_item.created_time_formatted }}">
-                        </i>                                             
+                            {# Alterado para usar created_at (ISO string) - JS pode precisar formatar #}
+                            title="Created Time:<br>{{ task_item.created_at }}">
+                        </i>
                         <i class="bi bi-trash fs-4" id="deleteToDo" data-bs-toggle="modal" data-bs-target="#DeleteToDo"></i>
                     </div>
 
@@ -63,7 +70,7 @@
         {% endfor %}
 
     </div>
-    
+
 
     <!-- Button New Task -->
 
@@ -74,55 +81,59 @@
 
     <div class="finished-container-collapse">
         <!-- Botão que controla o conteúdo -->
-        <a 
-            href="#" 
-            class="text-decoration-underline text-primary details-toggler" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#detailsContent" 
-            aria-expanded="false" 
+        <a
+            href="#"
+            class="text-decoration-underline text-primary details-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#detailsContent"
+            aria-expanded="false"
             aria-controls="detailsContent">
             Completed +/-
         </a>
 
-    
+
         <!-- Conteúdo colapsável -->
         <div class="collapse mt-3" id="detailsContent">
 
             <div class="row g-4 my-3 to-do-grid" id="toDoGridCompleted">
 
-                {% for to_do_item in to_do_list if to_do_item.status == 'completed' %}
-        
+                {# Alterado para iterar sobre project.tasks #}
+                {% for task_item in project.tasks if task_item.status == 'completed' %}
+
                     <div class="col-md-12 to-do-item">
-        
-                        <div 
+
+                        <div
                             class="d-flex justify-content-between align-items-center to-do-card"
-                            data-id="{{ to_do_item.identificator }}">
-                
+                            {# Alterado para usar o identificador da tarefa do dicionário #}
+                            data-id="{{ task_item.identificator }}">
+
                             <div class="to-do-text-check d-flex align-items-center me-3 flex-grow-1 text-wrap">
                                 <input class="form-check-input to-do-check-box me-3 mt-0 rounded-checkbox" type="checkbox" value="" aria-label="..." checked>
-                                <span class="to-do-title mb-0 text-break"><del>{{ to_do_item.title }}</del></span>
+                                {# Alterado para usar o título da tarefa do dicionário #}
+                                <span class="to-do-title mb-0 text-break"><del>{{ task_item.title }}</del></span>
                             </div>
                             <div class="d-flex flex-shrink-0" id="icons">
-                                <i 
-                                    class="bi bi-info-circle fs-4 me-3" 
-                                    id="infoToDo" 
-                                    data-bs-toggle="tooltip" 
+                                <i
+                                    class="bi bi-info-circle fs-4 me-3"
+                                    id="infoToDo"
+                                    data-bs-toggle="tooltip"
                                     data-bs-placement="left"
                                     data-bs-custom-class="info-to-do-tooltip"
                                     data-bs-html="true"
-                                    title=" 
-                                    Created Time:<br>{{ to_do_item.created_time_formatted }}
+                                    {# Alterado para usar created_at e completed_at (ISO strings) - JS pode precisar formatar #}
+                                    title="
+                                    Created Time:<br>{{ task_item.created_at }}
                                     <br>
-                                    Completed Time:<br>{{ to_do_item.completed_time_formatted }}">
-                                </i>                                                                
+                                    Completed Time:<br>{{ task_item.completed_at }}">
+                                </i>
                                 <i class="bi bi-trash fs-4" id="deleteToDo" data-bs-toggle="modal" data-bs-target="#DeleteToDo"></i>
                             </div>
                         </div>
-        
+
                     </div>
-        
+
                 {% endfor %}
-        
+
             </div>
 
         </div>
@@ -161,7 +172,7 @@
 
 
     <!-- Delete To Do Modal -->
-    
+
     <div class="modal fade primary-modal" id="DeleteToDo" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="DeleteToDo" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -190,12 +201,12 @@
 
 
 {% block script %}
-    <script>       
-        
-        const task_data = {
-            today_total_seconds: "{{ task.today_total_seconds }}",
-            task_id: "{{ task.identificator }}",
-            task_name: "{{ task.title }}"
+    <script>
+
+        const project_data = {
+            today_total_seconds: "{{ project.today_focus_total_seconds }}",
+            project_id: "{{ project.project.identificator }}", 
+            project_name: "{{ project.project.title }}"
         };
 
         const user_data = {
@@ -205,17 +216,17 @@
 
 
         document.getElementById('backButtom').addEventListener('click', function() {
-            window.location.href = `/task/`;
+            window.location.href = `/project/`;
         });
 
 
     </script>
     <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="{{ url_for('static', filename='js/start_task/to_do_manage.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/project_room/to_do_manage.js') }}"></script> 
     <script src="{{ url_for('static', filename='js/toast.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/start_task/timer.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/start_task/tooltip_manage.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/project_room/timer.js') }}"></script> 
+    <script src="{{ url_for('static', filename='js/project_room/tooltip_manage.js') }}"></script>
 
 
 {% endblock %}
