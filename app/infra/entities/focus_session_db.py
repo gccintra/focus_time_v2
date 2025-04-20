@@ -13,6 +13,7 @@ if TYPE_CHECKING:
 class FocusSessionDB(db.Model):
     __tablename__ = "focus_sessions"
 
+    # Mudar aqui para started_at e finished_at 
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     started_at: Mapped[datetime] = mapped_column(DateTime, nullable=False)
     duration_seconds: Mapped[int] = mapped_column(Integer, nullable=False)

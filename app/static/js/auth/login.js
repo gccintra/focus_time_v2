@@ -14,7 +14,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     .then(response => response.json())
     .then(({ success, message, data, error }) => {
         if (success){
-            window.location.href = `/task`;
+            window.location.href = `/project`;
         } else {
             showToast('error', message || 'Erro ao se registrar');
             console.log(error)

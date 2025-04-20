@@ -1,6 +1,6 @@
 from .data_record import DataRecord
-from app.models.task import Task
-from app.models.exceptions import TaskNotFoundError, TodoNotFoundError
+from app.models.project import Project
+from app.models.exceptions import ProjectNotFoundError, TaskNotFoundError
 import uuid, json
 from app.utils.logger import logger
 
@@ -26,7 +26,7 @@ class ToDoRecord(DataRecord):
                     logger.info(f'To Do com id {todo_id} encontrada com sucesso!')
                     return record
             logger.warning(f"To Do com id '{todo_id}' não foi encontrado.")
-            raise TodoNotFoundError(task_id=todo_id)
+            raise TaskNotFoundError(task_id=todo_id)
         except Exception as e:
             logger.error(f"Erro inesperado ao buscar to-do por ID '{todo_id}': {e}")
             raise
