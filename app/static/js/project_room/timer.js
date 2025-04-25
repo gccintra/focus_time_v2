@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         timerInterval = setInterval(() => {
             elapsedTimeDisplay = Math.floor((Date.now() - startTime) / 1000)
-            elapsedTimeSession++;
+            elapsedTimeSession = Math.floor((Date.now() - realStartTime.getTime()) / 1000)
             updateTimerDisplay(timerDisplay, elapsedTimeDisplay);
         }, 1000);
 
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
             isRunning = false;
             startButton.textContent = "Start";
             
-            // envia um request assíncrono e não bloqueante para um servidor web. O request não espera por uma resposta.
+            // request assíncrono e não bloqueante. O request não espera por uma resposta.
             const url = `/focus_session/save`;
             const data = JSON.stringify({started_at: realStartTimeISO, duration_seconds: elapsedTimeSession, project_id: projectID });
             const blob = new Blob([data], { type: "application/json" });
