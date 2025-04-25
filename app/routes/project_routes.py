@@ -34,6 +34,7 @@ def project_room_route(project_id):
 
 
 
+
 @project_bp.route("/update_task_time/<task_id>", methods=["POST", "PUT"])
 @login_required 
 def update_project_time_route(task_id):

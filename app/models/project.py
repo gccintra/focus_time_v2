@@ -26,9 +26,6 @@ class Project():
     def identificator(self) -> str:
         return self._identificator
 
-    # Identificator is usually immutable after creation, so no public setter typically needed.
-    # If needed for ORM mapping flexibility, make it internal or carefully controlled.
-
     @property
     def user_identificator(self) -> str:
         return self._user_identificator
@@ -37,7 +34,6 @@ class Project():
     def user_identificator(self, value: str):
         if not value:
             raise ProjectValidationError(field="user_identificator", message="User identificator cannot be empty.")
-        # Optional: Add UUID validation if needed
         try:
             uuid.UUID(value, version=4)
         except ValueError:
@@ -78,10 +74,7 @@ class Project():
             raise ProjectValidationError(field="active", message="'active' must be a boolean value.")
         self._active = value
 
-    # --- Removed Calculated Properties ---
-    # Properties like today_total_seconds, week_total_time etc. are removed.
-    # This logic should live in a service layer or be calculated from FocusSession data.
-
+   
     # --- ORM Mapping Methods ---
 
     @classmethod
@@ -96,7 +89,7 @@ class Project():
 
         return cls(
             identificator=project_db.identificator,
-            user_identificator=project_db.user.identificator, # Get from related UserDB
+            user_identificator=project_db.user.identificator, 
             title=project_db.title,
             color=project_db.color,
             active=project_db.active

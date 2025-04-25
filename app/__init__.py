@@ -6,6 +6,7 @@ from app.routes.task_routes import task_bp
 from app.routes.error_routes import error_bp
 from app.routes.home_routes import home_bp
 from app.routes.auth_routes import auth_bp
+from app.routes.focus_session_route import focus_session_bp
 from app.infra.db import db 
 from .websocket import socketio
 
@@ -26,5 +27,6 @@ def create_app():
     app.register_blueprint(error_bp)
     app.register_blueprint(home_bp)  
     app.register_blueprint(auth_bp)  
+    app.register_blueprint(focus_session_bp)
 
     return app

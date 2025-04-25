@@ -6,9 +6,7 @@
 
     <div class="my-4" id="projectHeader">
         <div id="projectHeaderContent" class="d-flex align-items-center gap-4">
-            {# Alterado para ir para a lista de projetos #}
             <i class="bi bi-chevron-left" id="backButtom" style="cursor: pointer;"></i>
-            {# Alterado para acessar o título do projeto dentro do dicionário #}
             <span>{{ project.project.title }}</span>
         </div>
     </div>
@@ -19,7 +17,6 @@
         <div class="mt-5 d-inline-block text-start">
             <p class="mb-3">Time in Focus Today:</p>
             <div id="timer" class="mb-4">
-                {# Alterado para usar o tempo formatado do dicionário (HH:MM:SS) #}
                 <span class="display-1" id="timerDisplay">{{ project.today_focus_time_formatted }}</span>
             </div>
             <button class="btn btn-primary w-100 py-2 fs-4" id="timerButton">Start</button>
@@ -33,7 +30,6 @@
 
     <div class="row g-4 my-3 to-do-grid" id="toDoGridInProgress">
 
-        {# Alterado para iterar sobre project.tasks #}
         {% for task_item in project.tasks if task_item.status == 'in progress' %}
 
             <div class="col-md-12 to-do-item">
@@ -45,7 +41,6 @@
 
                     <div class="to-do-text-check d-flex align-items-center me-3 flex-grow-1 text-wrap">
                         <input class="form-check-input to-do-check-box me-3 mt-0 rounded-checkbox" type="checkbox" value="" aria-label="...">
-                        {# Alterado para usar o título da tarefa do dicionário #}
                         <span class="to-do-title mb-0 text-break">{{ task_item.title }}</span>
                     </div>
 
@@ -57,7 +52,6 @@
                             data-bs-placement="left"
                             data-bs-custom-class="info-to-do-tooltip"
                             data-bs-html="true"
-                            {# Alterado para usar created_at (ISO string) - JS pode precisar formatar #}
                             title="Created Time:<br>{{ task_item.created_at }}">
                         </i>
                         <i class="bi bi-trash fs-4" id="deleteToDo" data-bs-toggle="modal" data-bs-target="#DeleteToDo"></i>
@@ -97,7 +91,6 @@
 
             <div class="row g-4 my-3 to-do-grid" id="toDoGridCompleted">
 
-                {# Alterado para iterar sobre project.tasks #}
                 {% for task_item in project.tasks if task_item.status == 'completed' %}
 
                     <div class="col-md-12 to-do-item">
@@ -109,7 +102,6 @@
 
                             <div class="to-do-text-check d-flex align-items-center me-3 flex-grow-1 text-wrap">
                                 <input class="form-check-input to-do-check-box me-3 mt-0 rounded-checkbox" type="checkbox" value="" aria-label="..." checked>
-                                {# Alterado para usar o título da tarefa do dicionário #}
                                 <span class="to-do-title mb-0 text-break"><del>{{ task_item.title }}</del></span>
                             </div>
                             <div class="d-flex flex-shrink-0" id="icons">

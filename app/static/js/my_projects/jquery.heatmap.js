@@ -419,7 +419,7 @@
                         lineHeight: cellSizePx,
                         height: cellSizePx,
                         width: cellSizePx, // Ensure it aligns with cells below
-                        overflow: 'hidden',
+                        overflow: 'visible',
                         whiteSpace: 'nowrap'
                     });
                     weekColumn.append(monthLabel);

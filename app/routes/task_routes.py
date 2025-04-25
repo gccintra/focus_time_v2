@@ -3,7 +3,7 @@ from app.controllers.task_controller import TaskController
 from ..utils.auth_decorator import login_required 
 
 
-task_bp = Blueprint("taskk", __name__, url_prefix="/task")
+task_bp = Blueprint("task", __name__, url_prefix="/task")
 task_controller = TaskController()
 
 @task_bp.route("/<task_id>/create_task", methods=["POST"])

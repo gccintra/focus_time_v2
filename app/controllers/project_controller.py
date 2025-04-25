@@ -59,8 +59,6 @@ class ProjectController:
             }), 500
 
 
-
-
     def project_room(self, project_id, user):
         try:
             project = self.service.get_details_for_project_room(project_id=project_id, user_id=user.identificator)
@@ -80,54 +78,7 @@ class ProjectController:
                 }
             }), 500
 
-    def update_task_time(self, task_id, user_id, data):
-        elapsed_seconds = int(data.get("elapsed_seconds")) if isinstance(data, dict) else None
-
-        try:
-            self.service.update_task_time(task_id=task_id, elapsed_seconds=elapsed_seconds, user_id=user_id,)
-            return jsonify({
-                "success": True,
-                "message": "The seconds have been saved.",
-                "data": None,
-                "error": None
-            }), 200
-        except ProjectNotFoundError as e:
-            return jsonify({
-                "success": False,
-                "message": "Task not found.",
-                "data": None,
-                "error": {
-                    "code": 404,
-                    "type": "TaskNotFoundError",
-                    "details": str(e)
-                }
-            }), 404
-        except ProjectNotFoundError as e:
-            logger.error(f"Erro ao atualizar o tempo de foco diário para a task {task_id}")
-            return jsonify({
-                "success": False,
-                "message": "An error occurred while processing your request. Please check the information provided and try again.",
-                "data": None,
-                "error": {
-                    "code": 400,
-                    "type": "TaskValidationError",
-                    "details": str(e)
-                }
-            }), 400
-        except Exception as e:   
-            logger.error(f"Erro ao atualizar o tempo de foco diário para a task {task_id}: {str(e)}")
-            return jsonify({
-                "success": False,
-                "message": "Something went wrong. Please try again later.",
-                "data": None,
-                "error": {
-                    "code": 500,
-                    "type": "InternalServerError",
-                    "details": str(e)
-                }
-            }), 500
-          
-
+    # colocar um try catch aqui.
     def get_data_for_last_365_days_home_chart(self, user_id=None):
         minutes_per_day = self.service.get_data_for_last_365_days_home_chart(user_id=user_id)
         return jsonify({
@@ -138,6 +89,9 @@ class ProjectController:
                 },
                 "error": None
             }), 200
+
+
+
 
 
     

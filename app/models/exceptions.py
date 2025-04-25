@@ -129,3 +129,14 @@ class FocusSessionValidationError(Exception):
         self.field = field
         self.message = message
         super().__init__(f"Validation Error on field '{field}': {message}")
+
+
+class AuthorizationError(Exception):
+    """Erro levantado quando um usuário tenta realizar uma ação não permitida."""
+    def __init__(self, user_id: str = None, resource_id: str = None, message: str = "Permission denied."):
+        details = []
+        if user_id: details.append(f"User '{user_id}'")
+        if resource_id: details.append(f"Resource '{resource_id}'")
+        if details:
+            message = f"{' accessing '.join(details)}: {message}"
+        super().__init__(message)

@@ -34,6 +34,33 @@ class ProjectRepository:
         except SQLAlchemyError as e:
             logger.error(f"Database error finding user by identificator {user_identificator}: {e}", exc_info=True)
             raise DatabaseError(f"Error accessing user data for identificator {user_identificator}.")
+        
+    def find_by_id_with_user(self, project_identificator: str) -> Optional[ProjectDB]:
+        """Encontra um ProjectDB pelo seu identificador, sem filtro de usuário, carregando o usuário."""
+        logger.debug(f"Repository: Finding project DB by identificator '{project_identificator}' (no user filter, loading user)")
+        try:
+            stmt = (
+                select(ProjectDB)
+                .where(ProjectDB.identificator == project_identificator)
+                .options(
+                    joinedload(ProjectDB.user) 
+                 )
+            )
+            project_db = self._session.execute(stmt).unique().scalar_one_or_none() 
+            if project_db:
+                logger.debug(f"Repository: Project DB found for identificator '{project_identificator}'. User loaded: {'Yes' if project_db.user else 'No'}")
+            else:
+                logger.debug(f"Repository: Project DB not found for identificator '{project_identificator}'")
+            return project_db
+        except MultipleResultsFound:
+            logger.error(f"Database integrity error: Multiple projects found with identificator {project_identificator}")
+            raise DatabaseError(f"Data integrity issue: multiple projects found for identificator {project_identificator}.")
+        except SQLAlchemyError as e:
+            logger.error(f"Database error finding project by identificator {project_identificator}: {e}", exc_info=True)
+            raise DatabaseError(f"Error accessing project data for identificator {project_identificator}.")
+        except Exception as e:
+             logger.error(f"Repository: Unexpected error finding project by id '{project_identificator}': {e}", exc_info=True)
+             raise DatabaseError(f"An unexpected error occurred while finding project '{project_identificator}'.")
 
 
     def add(self, project: Project) -> None:

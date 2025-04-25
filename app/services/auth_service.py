@@ -23,7 +23,7 @@ class AuthService:
             return user
 
         except (UsernameAlreadyExists, EmailAlreadyExists) as e:
-            logger.warning(f"Falha ao criar usuário: {e}")  # Agora funciona para ambos os casos
+            logger.warning(f"Falha ao criar usuário: {e}")  
             self.repo._session.rollback()
             raise
         except InvalidCreatePasswordError as e:
@@ -72,7 +72,6 @@ class AuthService:
             'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=6)  
         }
 
-        # Gere o JWT usando a chave secreta e o payload
         token = jwt.encode(payload, secret_key, algorithm='HS256')
         
         return token

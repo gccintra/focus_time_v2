@@ -3,7 +3,7 @@
 from datetime import datetime, timedelta
 from typing import Optional, TYPE_CHECKING
 
-# Assume que FocusSessionValidationError será definido em app/models/exceptions.py
+
 from app.models.exceptions import FocusSessionValidationError
 from app.infra.entities.focus_session_db import FocusSessionDB
 
@@ -59,9 +59,9 @@ class FocusSession:
     @duration_seconds.setter
     def duration_seconds(self, value: int):
         if value is None or not isinstance(value, int):
-             raise FocusSessionValidationError(field="duration_seconds", message="A duração em segundos é obrigatória e deve ser um inteiro.")
+            raise FocusSessionValidationError(field="duration_seconds", message="A duração em segundos é obrigatória e deve ser um inteiro.")
         if value < 0:
-             raise FocusSessionValidationError(field="duration_seconds", message="A duração em segundos não pode ser negativa.")
+            raise FocusSessionValidationError(field="duration_seconds", message="A duração em segundos não pode ser negativa.")
         self._duration_seconds = value
 
     @property

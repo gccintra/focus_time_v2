@@ -1,3 +1,4 @@
+from functools import total_ordering
 from typing import List, Dict, Any 
 from datetime import date, timedelta, datetime
 
@@ -65,7 +66,7 @@ class ProjectService:
             project = self.repo.get_by_id(project_identificator=project_id, user_identificator=user_id)
             if project is None:
                 logger.warning(f"Service: Project not found for id '{project_id}' and user '{user_id}'.")
-                raise ProjectNotFoundError(project_id=project_id) # Raise error if not found
+                raise ProjectNotFoundError(project_id=project_id) 
             return project
         except (ProjectNotFoundError, DatabaseError) as e:
              raise
@@ -124,9 +125,9 @@ class ProjectService:
                 if session.started_at.date() == today
             )
             response_data["today_focus_time_formatted"] = format_hour_minute_second(today_total_seconds)
-            response_data["today_focus_total_seconds"] = today_total_seconds # Pode ser útil ter os segundos também
+            response_data["today_focus_total_seconds"] = today_total_seconds 
 
-            logger.info(f"Service: Successfully prepared project details for frontend - id '{project_id}'")
+            logger.info(f"Service: Successfully prepared project details for frontend - id '{project_id}', today_focus_time_formatted: {response_data["today_focus_time_formatted"]}, today_total_seconds: {today_total_seconds}, response_data: {response_data["focus_sessions"]}")
             return response_data
 
         except (ProjectNotFoundError, DatabaseError, UserNotFoundError) as e:
