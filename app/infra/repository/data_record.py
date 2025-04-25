@@ -15,7 +15,7 @@ class DataRecord:
             'test_task.json': Task   
         }
 
-        self._filename = "app/repository/database/" +  filename
+        self._filename = "app/infra/repository/database/" +  filename
         self.model_class = self.models_classes.get(filename)
 
         if not self.model_class:
