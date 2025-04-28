@@ -1,5 +1,5 @@
 
-function inicializateToDoTooltips(){
+function inicializateTaskTooltips(){
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
     const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl);
@@ -10,9 +10,9 @@ function inicializateToDoTooltips(){
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    inicializateToDoTooltips();
+    inicializateTaskTooltips();
 });
 
-function reinitializateToDoTooltipsAfterDOMUpdate(){
-    inicializateToDoTooltips();
+function reinitializateTaskTooltipsAfterDOMUpdate(){
+    inicializateTaskTooltips();
 };

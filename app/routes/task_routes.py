@@ -1,48 +1,27 @@
-from flask import Blueprint, request, redirect, url_for
+from flask import Blueprint, request
 from app.controllers.task_controller import TaskController
-from ..utils.auth_decorator import login_required
+from ..utils.auth_decorator import login_required 
 
 
 task_bp = Blueprint("task", __name__, url_prefix="/task")
 task_controller = TaskController()
 
-@task_bp.route("/", methods=["GET"])
+@task_bp.route("/<project_id>/create_task", methods=["POST"])
 @login_required  
-def tasks_route():
-    user = request.current_user
-    return task_controller.my_tasks(user=user)
-
-@task_bp.route("/get_data_for_all_doughnut_home_charts", methods=["GET"])
-@login_required 
-def get_data_for_all_charts_menu_route():
-    user_id = request.current_user.identificator
-    return task_controller.get_data_for_all_charts(user_id=user_id)
-
-@task_bp.route("/new_task", methods=["POST"])
-@login_required 
-def new_task_route():
+def create_task_route(project_id):
     user_id = request.current_user.identificator
     data = request.get_json()
-    return task_controller.new_task(data=data, user_id=user_id)
+    return task_controller.create_task(user_id=user_id, project_id=project_id, data=data)
 
-@task_bp.route("/<task_id>", methods=["GET"])
+@task_bp.route("/<project_id>/change_status/<task_id>", methods=["PUT"])
+@login_required  
+def change_task_status_route(project_id, task_id):
+    data = request.get_json()
+    user_id = request.current_user.identificator
+    return task_controller.change_task_status(user_id=user_id, project_id=project_id, task_id=task_id, data=data)
+
+@task_bp.route("/<project_id>/delete/<task_id>", methods=["DELETE"])
 @login_required   
-def start_task_route(task_id):
-    user = request.current_user
-    return task_controller.start_task(task_id=task_id, user=user)
-
-@task_bp.route("/update_task_time/<task_id>", methods=["POST", "PUT"])
-@login_required 
-def update_task_time_route(task_id):
+def delete_task_route(project_id, task_id):
     user_id = request.current_user.identificator
-    data = request.get_json()
-    return task_controller.update_task_time(task_id=task_id, user_id=user_id, data=data)
-
-@task_bp.route("/get_data_for_last_365_days_home_chart", methods=["GET"])
-@login_required 
-def get_data_for_last_365_days_home_chart_route():
-    user_id = request.current_user.identificator
-    return task_controller.get_data_for_last_365_days_home_chart(user_id=user_id)
-
-
-
+    return task_controller.delete_task(user_id=user_id, project_id=project_id, task_id=task_id)

@@ -1,12 +1,12 @@
 import os
 from dotenv import load_dotenv
 from flask import Flask
-from flask_socketio import SocketIO
-from app.routes.task_routes import task_bp
-from app.routes.todo_routes import todo_bp  
+from app.routes.project_routes import project_bp
+from app.routes.task_routes import task_bp  
 from app.routes.error_routes import error_bp
 from app.routes.home_routes import home_bp
 from app.routes.auth_routes import auth_bp
+from app.routes.focus_session_route import focus_session_bp
 from app.infra.db import db 
 from .websocket import socketio
 
@@ -22,10 +22,11 @@ def create_app():
     db.init_app(app)
     socketio.init_app(app)
     
+    app.register_blueprint(project_bp)  
     app.register_blueprint(task_bp)  
-    app.register_blueprint(todo_bp)  
     app.register_blueprint(error_bp)
     app.register_blueprint(home_bp)  
     app.register_blueprint(auth_bp)  
+    app.register_blueprint(focus_session_bp)
 
     return app

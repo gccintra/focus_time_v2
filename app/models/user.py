@@ -1,29 +1,31 @@
-import bcrypt
+import bcrypt, re, uuid
 from app.models.exceptions import UserValidationError, InvalidCreatePasswordError
-import re
+from app.infra.entities.user_db import UserDB
+
 
 class User:
-    def __init__(self, identificator, username, email, password, status=None, hashed=False):
-        self.__identificator = identificator
-
-        self._username = None
+    def __init__(self, username, email, password, active=True, hashed=False, identificator=None):
+        self.identificator = identificator if identificator is not None else str(uuid.uuid4())
         self.username = username
-
-        self._email = None
         self.email = email
 
-        self._password = None
         if hashed:
            self._password = password
         else:
             self.password = password 
             
-        self._status = None
-        self.status = status or 'active'
+        self.active = active
 
     @property
     def identificator(self):
-        return self.__identificator
+        return self._identificator
+    
+    @identificator.setter
+    def identificator(self, value):
+        if not value:
+            raise UserValidationError("User Identificator", "User Identificator cannot be empty.")
+        self._identificator = value
+
 
     @property
     def username(self):
@@ -49,15 +51,14 @@ class User:
         self._email = value
     
     @property
-    def status(self):
-        return self._status
+    def active(self):
+        return self._active
     
-    @status.setter
-    def status(self, value):
-        valid_statuses = ["active"]
-        if value not in valid_statuses:
-            raise UserValidationError("Status", f"Invalid status. Choose one: {', '.join(valid_statuses)}.")
-        self._status = value
+    @active.setter
+    def active(self, value):
+        if not isinstance(value, bool):
+            raise UserValidationError("Active", "Invalid value. 'active' must be a boolean.")
+        self._active = value
 
     @property
     def password(self):
@@ -86,16 +87,35 @@ class User:
     def verify_password(self, password):
         """Verifica se a senha digitada corresponde ao hash salvo"""
         return bcrypt.checkpw(password.encode('utf-8'), self._password.encode('utf-8'))
-
-    def to_dict(self):
-        """Retorna um dicionário representando o usuário"""
-        return {
-            "identificator": self.__identificator,
-            "username": self.username,
-            "email": self.email,
-            "password": self._password,
-            "status": self._status
-        } 
     
+
+    @classmethod
+    def from_orm(cls, user_db: 'UserDB') -> 'User':
+        if not user_db:
+            return None # Retorna None se a entidade do DB for None
+
+        return cls(
+            identificator=user_db.identificator,
+            username=user_db.username,
+            email=user_db.email,
+            password=user_db.password, 
+            active=user_db.active,
+            hashed=True
+        )
+
+    def to_orm(self) -> 'UserDB':
+        return UserDB(
+            identificator=self._identificator,
+            username=self._username,
+            email=self._email,
+            password=self._password,
+            active=self._active
+        )
+
+
+    def __repr__(self):
+        return f"<User(identificator='{self.identificator}', username='{self.username}', email='{self.email}')>"
+
+
 
 

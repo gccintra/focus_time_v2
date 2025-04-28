@@ -391,7 +391,7 @@
             heatmapGrid.css({
                 display: 'flex',
                 gap: gutter,
-                overflowX: 'auto' // Allow horizontal scrolling if needed
+                overflowX: 'visible' // Allow horizontal scrolling if needed
             });
 
             let lastRenderedMonth = -1;
@@ -419,7 +419,7 @@
                         lineHeight: cellSizePx,
                         height: cellSizePx,
                         width: cellSizePx, // Ensure it aligns with cells below
-                        overflow: 'hidden',
+                        overflow: 'visible',
                         whiteSpace: 'nowrap'
                     });
                     weekColumn.append(monthLabel);
