@@ -7,7 +7,7 @@ from app.infra.entities.task_status_db import TaskStatusDB
 
 
 class TaskStatus:
-    # NAME_MAX_LEN = 255
+    NAME_MAX_LEN = 255
 
     def __init__(self, name: str):
         self._id: Optional[int] = None  
@@ -29,13 +29,13 @@ class TaskStatus:
         instance._id = status_db.id
         return instance
 
-    # @name.setter
-    # def name(self, value: str):
-    #     if not value or not isinstance(value, str):
-    #         raise TaskStatusValidationError(field="name", message="O nome do status é obrigatório.")
-    #     if len(value) > self.NAME_MAX_LEN:
-    #         raise TaskStatusValidationError(field="name", message=f"O nome do status não pode exceder {self.NAME_MAX_LEN} caracteres.")
-    #     self._name = value
+    @name.setter
+    def name(self, value: str):
+        if not value or not isinstance(value, str):
+            raise TaskStatusValidationError(field="name", message="O nome do status é obrigatório.")
+        if len(value) > self.NAME_MAX_LEN:
+            raise TaskStatusValidationError(field="name", message=f"O nome do status não pode exceder {self.NAME_MAX_LEN} caracteres.")
+        self._name = value
 
     # --- Métodos de Mapeamento ORM ---
 

@@ -30,15 +30,15 @@ class DatabaseError(Exception):
 
 class TaskError(Exception):
     """Erro geral relacionado ao ToDo."""
-    def __init__(self, message="Erro relacionado ao Tas."):
+    def __init__(self, message="Erro relacionado ao Task."):
         super().__init__(message)
 
 
 class TaskNotFoundError(TaskError):
     """Erro para quando uma task não é encontrada."""
-    def __init__(self, todo_id=None, message="To-do não encontrado."):
-        if todo_id:
-            message = f"To-do com ID '{todo_id}' não foi encontrado."
+    def __init__(self, task_id=None, message="Task Not found."):
+        if task_id:
+            message = f"Task with ID '{task_id}' not found"
         super().__init__(message)
 
 
@@ -110,7 +110,7 @@ class TasKStatusError(Exception):
         super().__init__(message)
 
 
-class TaskStatusValidationError(Exception):
+class TaskStatusValidationError(TasKStatusError):
     """Erro para validação de dados."""
     def __init__(self, field=None, message=None):
         if field and not message:
@@ -119,6 +119,16 @@ class TaskStatusValidationError(Exception):
             message = f"Validation error in field '{field}': {message}"
         elif not message and not field:
              message = f"Task Status validation failed due to invalid or missing data."
+        super().__init__(message)
+
+
+
+
+class TaskStatusNotFound(TasKStatusError):
+    """Erro para quando um task status não é encontrada."""
+    def __init__(self, task_status_id=None, message="Task Status Not Found."):
+        if task_status_id:
+            message = f"Task Status ID '{task_status_id}' not found."
         super().__init__(message)
 
 

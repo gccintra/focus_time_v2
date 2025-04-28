@@ -15,11 +15,11 @@ class ProjectController:
             logger.error(f"Erro ao buscar os projects de {user.username}: {str(e)}")
             return abort(500)
     
-    def create_new_project(self, data, user_id):
+    def create_project(self, data, user_id):
         project_title = data.get('title') if isinstance(data, dict) else None
         project_color = data.get('color') if isinstance(data, dict) else None
         try:
-            project = self.service.create_new_project(title=project_title, color=project_color, user_id=user_id)
+            project = self.service.create_project(title=project_title, color=project_color, user_id=user_id)
             return jsonify({
                 "success": True,
                 "message": "Project created successfully",

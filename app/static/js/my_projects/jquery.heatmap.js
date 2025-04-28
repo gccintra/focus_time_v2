@@ -391,7 +391,7 @@
             heatmapGrid.css({
                 display: 'flex',
                 gap: gutter,
-                overflowX: 'auto' // Allow horizontal scrolling if needed
+                overflowX: 'visible' // Allow horizontal scrolling if needed
             });
 
             let lastRenderedMonth = -1;

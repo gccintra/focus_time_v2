@@ -17,7 +17,7 @@ def projects_route():
 def create_project_route():
     user_id = request.current_user.identificator
     data = request.get_json()
-    return project_controller.create_new_project(data=data, user_id=user_id)
+    return project_controller.create_project(data=data, user_id=user_id)
 
 @project_bp.route("/get_data_for_last_365_days_home_chart", methods=["GET"])
 @login_required 
@@ -30,15 +30,4 @@ def get_data_for_last_365_days_home_chart_route():
 def project_room_route(project_id):
     user = request.current_user
     return project_controller.project_room(project_id=project_id, user=user)
-
-
-
-
-
-@project_bp.route("/update_task_time/<task_id>", methods=["POST", "PUT"])
-@login_required 
-def update_project_time_route(task_id):
-    user_id = request.current_user.identificator
-    data = request.get_json()
-    return project_controller.update_task_time(task_id=task_id, user_id=user_id, data=data)
 

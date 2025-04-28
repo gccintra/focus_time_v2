@@ -6,6 +6,7 @@ from ..utils.auth_decorator import login_required
 focus_session_bp = Blueprint("focus_session", __name__, url_prefix="/focus_session")
 focus_session_controller = FocusSessionController()
 
+# Alterar a rota, colocar o id do project aqui, inves de colocar no corpo da requisição, para seguir um padrao
 @focus_session_bp.route("/save", methods=["POST"])
 @login_required  
 def focus_session_save_route():

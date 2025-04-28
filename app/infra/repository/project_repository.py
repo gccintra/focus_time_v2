@@ -82,7 +82,7 @@ class ProjectRepository:
             logger.error(f"Repository: Database error adding/flushing project '{project.title}': {e}", exc_info=True)
             raise DatabaseError(f"Failed to add project '{project.title}' to the database session.")
         except UserNotFoundError: 
-             raise
+            raise
         except Exception as e:
              logger.error(f"Repository: Unexpected error adding project '{project.title}': {e}", exc_info=True)
              raise DatabaseError(f"An unexpected error occurred while adding project '{project.title}'.")
@@ -238,8 +238,8 @@ class ProjectRepository:
             project_db = self._session.execute(stmt).scalar_one_or_none() # Use _or_none
 
             if not project_db:
-                 logger.warning(f"Repository: Project with id '{project.identificator}' not found for update for user '{project.user_identificator}'.")
-                 raise ProjectNotFoundError(project_id=project.identificator) # Raise if not found for update
+                logger.warning(f"Repository: Project with id '{project.identificator}' not found for update for user '{project.user_identificator}'.")
+                raise ProjectNotFoundError(project_id=project.identificator) # Raise if not found for update
 
             # Update attributes from the domain model onto the managed ORM instance
             project_db.title = project.title

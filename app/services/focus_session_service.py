@@ -13,21 +13,8 @@ from ..utils.logger import logger
 
 class FocusSessionService:
     def __init__(self):
-        from app.services.project_service import ProjectService
-        self.project_service = ProjectService()
         self.project_repo = ProjectRepository()
         self.repo = FocusSessionRepository()
-       
-
-    def _find_project_db_by_id_only(self, project_id: str) -> Optional['ProjectDB']:
-        """Helper para buscar ProjectDB apenas por ID usando o repo injetado."""
-        logger.debug(f"Service: Finding project DB by id '{project_id}' (no user filter)")
-        try:
-            project_db = self.project_repo.find_by_id_with_user(project_identificator=project_id) 
-            return project_db
-        except DatabaseError as e:
-            logger.error(f"Service: Error finding project DB by id '{project_id}': {e}", exc_info=True)
-            raise #
 
     def save_focus_session(self, user_id: str, project_id: str, started_at: datetime, duration_seconds: int) -> FocusSession:
         logger.info(f"Service: Attempting to save focus session for project '{project_id}' by user '{user_id}'")
@@ -36,7 +23,7 @@ class FocusSessionService:
             if duration_seconds <= 0:
                 raise FocusSessionValidationError(field="duration_seconds", message="duration of focus session cannot be under or equal 0 seconds.")
 
-            project_db_check = self._find_project_db_by_id_only(project_id)
+            project_db_check = self.project_repo.find_by_id_with_user(project_identificator=project_id)
 
             if project_db_check is None:
                 logger.warning(f"Service: Project '{project_id}' not found.")

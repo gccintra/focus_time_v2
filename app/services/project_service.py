@@ -10,13 +10,10 @@ from ..models.exceptions import ProjectNotFoundError, ProjectValidationError, Da
 from ..infra.repository.project_repository import ProjectRepository
 from ..utils.logger import logger
 
-
-
 def format_hour_minute(total_seconds: int) -> str:
     hours, remainder = divmod(total_seconds, 3600)
     minutes = round(remainder / 60)
     return f"{hours:02}h{minutes:02}m"
-
 
 def format_hour_minute_second(total_seconds: int) -> str:
     hours, remainder = divmod(total_seconds, 3600)
@@ -40,7 +37,7 @@ class ProjectService:
             logger.error(f"Service: Database error getting projects for user '{user_id}': {e}", exc_info=True)
             raise 
 
-    def create_new_project(self, title: str, color: str, user_id: str) -> Project:
+    def create_project(self, title: str, color: str, user_id: str) -> Project:
         logger.info(f"Service: Attempting to create project '{title}' for user '{user_id}'")
         try:
             new_project = Project(title=title, color=color, user_identificator=user_id)
@@ -104,17 +101,17 @@ class ProjectService:
                     "description": task.description,
                     # Acessa o nome do objeto de status associado
                     "status": task.status.name if task.status else "N/A",
-                    "created_at": task.created_at.isoformat() if task.created_at else None,
-                    "completed_at": task.completed_at.isoformat() if task.completed_at else None,
+                    "created_at": task.created_at.strftime("%Y-%m-%d %H:%M") if task.created_at else None,
+                    "completed_at": task.completed_at.strftime("%Y-%m-%d %H:%M") if task.completed_at else None,
                 } for task in project_details_dto.tasks
             ]
 
             response_data["focus_sessions"] = [
                 {
                     "id": session.id,
-                    "started_at": session.started_at.isoformat(),
+                    "started_at": session.started_at,
                     "duration_seconds": session.duration_seconds,
-                    "end_time": session.end_time.isoformat(),
+                    "end_time": session.end_time,
                 } for session in project_details_dto.focus_sessions
             ]
 
@@ -136,12 +133,6 @@ class ProjectService:
         except Exception as e:
             logger.error(f"Service: Unexpected error preparing project details for frontend - id '{project_id}': {e}", exc_info=True)
             raise DatabaseError(f"An unexpected error occurred while preparing details for project '{project_id}'.")
-
-
-
-
-
-# ====================================================================================================================================
 
     def get_projects_with_time_summary(self, user_id: str) -> List[Dict[str, Any]]:
         logger.info(f"Service: Calculating time summaries per project for user '{user_id}'")

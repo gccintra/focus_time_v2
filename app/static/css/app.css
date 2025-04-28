@@ -148,7 +148,7 @@ body {
 
 
 /* Estilo do cartão */
-.to-do-card {
+.task-card {
     background-color: #212121;
     color: #e0e0e0;
     border-radius: 15px;
@@ -160,14 +160,14 @@ body {
 
 
 /* Estilo do botão de exclusão */
-.to-do-card #deleteToDo {
+.task-card #deleteTaskButton {
     cursor: pointer;
     font-size: 1.4rem;
     color: #e0e0e0;
     transition: color 0.3s ease;
 }
 
-.to-do-card #deleteToDo:hover {
+.task-card #deleteTaskButton:hover {
     color: #ff4d4d;
     transform: scale(1.2);
 }
@@ -198,13 +198,13 @@ body {
 
 
 /* Centralização e estilo do texto */
-.to-do-text-check {
+.task-text-check {
     display: flex;
     align-items: center; /* Alinhando o texto e o checkbox verticalmente */
     gap: 10px; /* Ajuste do espaço entre checkbox e texto */
 }
 
-.to-do-text-check span {
+.task-text-check span {
     font-size: 20px;
     color: #ffffff;
 }
@@ -215,20 +215,20 @@ body {
 }
 
 
-.to-do-card #infoToDo {
+.task-card #infoTask {
     cursor: pointer;
     font-size: 1.4rem;
     color: #e0e0e0;
     transition: color 0.3s ease;
 }
 
-.to-do-card #infoToDo:hover {
+.task-card #infoTask:hover {
     color: #21b9f5;
     transform: scale(1.2);
 }
 
 /* Estilização para o tooltip */
-.info-to-do-tooltip {
+.info-task-tooltip {
     --bs-tooltip-bg: #21b9f5;
     --bs-tooltip-color: #ffffff;
 }
@@ -239,7 +239,6 @@ body {
     justify-content: space-between;
     width: 100%;
     max-width: 100%;
-    
 }
 
 
