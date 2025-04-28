@@ -1,12 +1,14 @@
 let timerInterval;
 let saveInterval;
-let elapsedTime = parseInt(task_data.today_total_seconds) || 0;
+let elapsedTimeDisplay = parseInt(project_data.today_total_seconds) || 0;
 let isRunning = false;
 let startTime
+let realStartTimeISO
+let elapsedTimeSession
 const userId = user_data.user_id; 
 const username = user_data.username;
-const taskName = task_data.task_name
-
+const projectName = project_data.project_name
+const projectID = project_data.project_id
 const socket = io({ query: { user_id: userId, username: username } });
 
 socket.on("connect", () => {
@@ -19,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const startButton = document.querySelector("#timerButton");
     const timerDisplay = document.getElementById("timerDisplay");
-    const taskId = task_data.task_id; 
 
     startButton.addEventListener("click", function() {
         if (isRunning) {
@@ -30,22 +31,29 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     function startTimer(){
-        startTime = Date.now() - elapsedTime * 1000;
+        let realStartTime = new Date(Date.now())
+        realStartTimeISO = getISOString(realStartTime);
+        
+        elapsedTimeSession = 0;
+
+        //console.log(realStartTime)
+        startTime = Date.now() - elapsedTimeDisplay * 1000;
         isRunning = true;
         startButton.textContent = "Stop";
 
-        // user_id: userId, username: username 
-        socket.emit("enter_focus", { username: username, user_id: userId, task_name: taskName, start_time: Date.now() });
+        // mudar taskname no websocket.
+        socket.emit("enter_focus", { username: username, user_id: userId, task_name: projectName, start_time: Date.now() });
 
 
         timerInterval = setInterval(() => {
-            elapsedTime = Math.floor((Date.now() - startTime) / 1000);
-            updateTimerDisplay(timerDisplay, elapsedTime);
+            elapsedTimeDisplay = Math.floor((Date.now() - startTime) / 1000)
+            elapsedTimeSession = Math.floor((Date.now() - realStartTime.getTime()) / 1000)
+            updateTimerDisplay(timerDisplay, elapsedTimeDisplay);
         }, 1000);
 
-        saveInterval = setInterval(() => {
-            saveElapsedTime();
-        }, 600000)   // 10 minutes
+        // saveInterval = setInterval(() => {
+        //     saveElapsedTime();
+        // }, 600000)   // 10 minutes
 
     }
 
@@ -61,12 +69,16 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function saveElapsedTime(){
-        fetch(`/task/update_task_time/${taskId}`, {
+        if (elapsedTimeSession == 0) {
+            return;
+        }
+
+        fetch(`/focus_session/save`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ elapsed_seconds: elapsedTime })
+            body: JSON.stringify({started_at: realStartTimeISO, duration_seconds: elapsedTimeSession, project_id: projectID })
         })
         .then(response => response.json())
         .then(({ success, message, data, error }) => {
@@ -99,9 +111,9 @@ document.addEventListener("DOMContentLoaded", function() {
             isRunning = false;
             startButton.textContent = "Start";
             
-            // envia um request assíncrono e não bloqueante para um servidor web. O request não espera por uma resposta.
-            const url = `/task/update_task_time/${taskId}`;
-            const data = JSON.stringify({ elapsed_seconds: elapsedTime });
+            // request assíncrono e não bloqueante. O request não espera por uma resposta.
+            const url = `/focus_session/save`;
+            const data = JSON.stringify({started_at: realStartTimeISO, duration_seconds: elapsedTimeSession, project_id: projectID });
             const blob = new Blob([data], { type: "application/json" });
     
             navigator.sendBeacon(url, blob);
@@ -109,4 +121,19 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+function getISOString(date) {
 
+    const pad = (num) => String(num).padStart(2, '0');
+  
+    const year = date.getFullYear();
+    const month = pad(date.getMonth() + 1); 
+    const day = pad(date.getDate());
+    const hours = pad(date.getHours());
+    const minutes = pad(date.getMinutes());
+    const seconds = pad(date.getSeconds());
+    const milliseconds = String(date.getMilliseconds()).padStart(3, '0');
+  
+  
+    return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}.${milliseconds}`;
+  
+  }

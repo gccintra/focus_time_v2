@@ -1,0 +1,149 @@
+{% extends "partials/base.html" %}
+
+
+
+{% block content %}
+
+  <!-- project Grid -->  
+  <div class="row g-5 mb-5" id="projectGrid">
+    {% for project in projects %}
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div 
+            class="d-flex custom-card h-100" 
+            style="border-color: {{ project.color }}"
+            data-id="{{ project.identificator }}"> 
+
+            <div class="flex-grow-1 text-wrap">
+              <h3 class="text-break">{{ project.title }}</h3>
+              <p>Today: {{ project.today_total_time }}</p>
+              <p>Week: {{ project.week_total_time }}</p>
+            </div>
+
+            <div class="flex-shrink-0">
+              <canvas id="myPieChart-{{ project.identificator }}" style="max-width: 150px; max-height: 150px;"></canvas>
+            </div>
+
+          </div>
+        </div>
+    {% endfor %}
+  </div>
+
+
+  <!-- Button New project -->
+
+  <div class="d-grid py-3 mb-5">
+    <button class="btn btn-primary py-3 fs-5" type="button" data-bs-toggle="modal" data-bs-target="#newProject">New Project</button>
+  </div>
+
+
+  <!-- Modal New project -->
+
+  <div class="modal fade primary-modal" id="newProject"  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="newProjectLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="newProjectLabel">New Project</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row g-3">
+              <div class="col-md-10">
+                <label for="projectTitle" class="form-label modal-label">Project Title</label>
+                <input type="text" class="dark-input form-control" maxlength="30" id="projectTitle" placeholder="insert a project name">
+                <div id="charCount" class="form-text" style="color: #fff;  font-weight: 300;">0/30 characters</div>
+              </div>
+              <div class="col-md-2">
+                <label for="projectColor" class="form-label modal-label">Color</label>
+                <input type="color" class="dark-input form-control form-control-color" id="projectColor" value="#6A17FF">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary w-100 fs-5 py-3" type="button" id="createProjectButton">Create Project</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2 class="mt-5">Last 365 Days</h2>
+
+  <div class="py-4 px-4 mt-4 mb-5" id="graph365">
+    <div class="" id="github-container">
+      <div id="heatmap-container"></div>
+    </div>
+    <div class="d-flex flex-row-reverse mt-4 gap-2" id="LessMore">
+      <p class="m-0">More</p>
+      <div class="d-flex gap-1">
+        <div class="less-more-cell" style="background-color: #303030 ;"></div>
+        <div class="less-more-cell" style="background-color: #1b3b2b;"></div>
+        <div class="less-more-cell" style="background-color: #085e30;"></div>
+        <div class="less-more-cell" style="background-color: #0f943b;"></div>
+        <div class="less-more-cell" style="background-color: #1fc443;"></div>
+      </div>
+      <p class="m-0">Less</p>
+    </div>
+  </div>
+  
+  <!-- Toast message -->
+  <div class="toast-container position-fixed top-0 end-0 p-3" id="toastContainer"></div>
+
+
+
+  
+
+
+{% endblock %}
+
+{% block script %}
+  <script>  
+
+    const user = {
+      username: "{{ user.username }}",
+      user_id: "{{ user.identificator }}"
+    };
+    
+    const data_for_script = {
+      projectsData: {{ projects | tojson }},
+      username: "{{ user.username }}",
+      user_id: "{{ user.identificator }}"
+    }
+ 
+
+    document.getElementById('projectGrid').addEventListener('click', function(event) {
+      const card = event.target.closest('.custom-card');
+      if (card) {
+          const projectId = card.getAttribute('data-id');
+          if (projectId) {
+            window.location.href = `/project/${projectId}`;
+          }
+      }
+    });
+
+    
+
+
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+
+
+  <script src="{{ url_for('static', filename='js/my_projects/project_card_charts.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/my_projects/project_handler.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/my_projects/jquery.heatmap.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/my_projects/heatmap_init.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/my_projects/focus_users_display..js') }}"></script>
+  <script src="{{ url_for('static', filename='js/toast.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/auth/logout.js') }}"></script>
+
+
+
+
+{% endblock %}
+

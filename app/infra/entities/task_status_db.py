@@ -13,7 +13,7 @@ class TaskStatusDB(db.Model):
     __tablename__ = "task_status"
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True, nullable=False)
-    name: Mapped[str] = mapped_column(String(255), nullable=False)
+    name: Mapped[str] = mapped_column(String(255), nullable=False, unique=True)
 
     tasks: Mapped[List[TaskDB]] = relationship(back_populates="status")
 

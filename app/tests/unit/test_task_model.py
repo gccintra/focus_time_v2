@@ -1,6 +1,6 @@
 import pytest
 from datetime import date, timedelta
-from app.models.task import Task
+from app.models.project import Task
 from app.models.exceptions import TaskValidationError
 
 def test_task_initialization():

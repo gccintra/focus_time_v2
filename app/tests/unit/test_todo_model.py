@@ -1,6 +1,6 @@
 import pytest
 from datetime import datetime, timedelta
-from app.models.todo import ToDo
+from app.models.task import ToDo
 from app.models.exceptions import ToDoValidationError
 
 def test_todo_initialization():

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('/task/get_data_for_last_365_days_home_chart')
+    fetch('/project/get_data_for_last_365_days_home_chart')
     .then(response => response.json())
     .then(({ success, message, data, error }) => {
         if (success) {
